@@ -1,4 +1,5 @@
 html, body{height: 100%;}
+.color-white{color:#fff;}
 .intro-wrapper{padding:10px 0; height:100%;  display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-align: center;  -ms-flex-align: center; -webkit-align-items: center; align-items: center;}
 .intro-wrapper .container{position: relative;}
 .intro-wrapper .container .audio-control{position: absolute; z-index: 0;}
@@ -79,3 +80,79 @@ html, body{height: 100%;}
 	.registrer-wrapper form label{font-weight:normal;}
 	.registrer-wrapper form .btn-primary{min-width:inherit;}
 	/** Registration form ends **/
+	
+  /*** Acutal test UI starts here ***/
+	.tonal-test-wrapper h1{font-size:40px; font-weight:normal;}
+	.tonal-test-wrapper .tonal-test-view{margin:50px 0;}
+	.tonal-test-wrapper .tonal-test-view .option-view{display:inline-block; margin:20px;}
+	.tonal-test-wrapper .tonal-test-view .option-view label{font-size:40px; padding:35px 55px; pointer-events:none;}
+	.btn-blue {
+  background: #108FE8;
+  border: 3px solid transparent;
+  border-radius: 100%;
+  box-shadow: 0 -2px 0 3px #0d72b8 inset, 0 5px 5px rgba(3, 25, 41, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+  cursor: pointer;
+  display: inline-block;
+ color:#fff;
+}
+.btn-blue:hover {
+  background: #333; color:#fff;
+  box-shadow: 0 -2px 0 3px #1a1a1a inset, 0 5px 5px rgba(0, 0, 0, 0.17), 0 15px rgba(255, 255, 255, 0.32) inset;
+}
+.btn-blue.active{border:3px solid #fff;}
+.btn-blue:focus{text-decoration:none;}
+
+.btn-red {
+  background: #E53030;
+  border: 3px solid transparent;
+  border-radius: 100%;
+  box-shadow: 0 -2px 0 3px #c91919 inset, 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+  cursor: pointer;
+  display: inline-block;
+ color:#fff;
+}
+.btn-red:hover {
+  background: #333; color:#fff;
+  box-shadow: 0 -2px 0 3px #1a1a1a inset, 0 5px 5px rgba(0, 0, 0, 0.17), 0 15px rgba(255, 255, 255, 0.32) inset;
+}
+
+.btn-red:focus{text-decoration:none;}
+.btn-red.active{border:3px solid #fff;}
+.btn-green {
+  background: #0EC518;
+  border: 3px solid transparent;
+  border-radius: 100%;
+  box-shadow: 0 -2px 0 3px #0b9512 inset, 0 5px 5px rgba(0, 7, 1, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+  cursor: pointer;
+  display: inline-block;
+ color:#fff;
+}
+.btn-green:hover {
+  background: #333; color:#fff;
+  box-shadow: 0 -2px 0 3px #1a1a1a inset, 0 5px 5px rgba(0, 0, 0, 0.17), 0 15px rgba(255, 255, 255, 0.32) inset;
+}
+.btn-green.active{border:3px solid #fff;}
+.btn-green:focus{text-decoration:none;}
+
+
+.btn-yellow {
+  background: #FFC334;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  box-shadow: 0 -2px 0 3px #ffb401 inset, 0 5px 5px rgba(103, 73, 0, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+  cursor: pointer;
+  display: inline-block;
+ color:#fff;
+}
+.btn-yellow:hover{
+  background: #333; color:#fff;
+  box-shadow: 0 -2px 0 3px #1a1a1a inset, 0 5px 5px rgba(0, 0, 0, 0.17), 0 15px rgba(255, 255, 255, 0.32) inset;
+}
+.btn-yellow:focus{text-decoration:none;}
+
+
+ input.radiobtn-custom-green[type='radio'] {display: none; }
+ input.radiobtn-custom-green[type='radio'] + label { background: #0EC518; border: 3px solid transparent; border-radius: 100%; box-shadow: 0 -2px 0 3px #0b9512 inset, 0 5px 5px rgba(0, 7, 1, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset; cursor: pointer;  display: inline-block; color:#fff;}
+ input.radiobtn-custom-green[type='radio']:checked + label{border:3px solid #fff;}
+ 
+  /*** Actual test UI ends here ***/  

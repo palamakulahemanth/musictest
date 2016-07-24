@@ -9,7 +9,13 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('home');
+		if(isset($this->session->userdata['UserID']))
+		{
+			redirect('/welcome', 'refresh');
+		}else
+		{
+			$this->load->view('home');
+		}
 	}
 
 	public function register()

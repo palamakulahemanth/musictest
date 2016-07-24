@@ -29,7 +29,13 @@ class Register extends CI_Model
 
 			if($result)
 			{
-				return $this->db->insert_id();
+				$intUserID = $this->db->insert_id();
+
+				$this->session->set_userdata("UserName", $_POST['firstname']);
+				$this->session->set_userdata("LastName", $_POST['lastname']);
+				$this->session->set_userdata("Gender", $_POST['gender']);
+				$this->session->set_userdata("UserID", $intUserID);
+				return $intUserID;
 			}else
 			{
 				return array('OOPS...! We are not able to register you now. Please try again later.');

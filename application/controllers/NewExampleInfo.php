@@ -9,6 +9,12 @@ class NewExampleInfo extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('new_example_info');
+		if(!isset($this->session->userdata['UserID']))
+		{
+			redirect('/', 'refresh');
+		}else
+		{
+			$this->load->view('new_example_info');
+		}
 	}
 }

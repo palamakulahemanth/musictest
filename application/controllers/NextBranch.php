@@ -9,6 +9,12 @@ class NextBranch extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('next_branch');
+		if(!isset($this->session->userdata['UserID']))
+		{
+			redirect('/', 'refresh');
+		}else
+		{
+			$this->load->view('next_branch');
+		}
 	}
 }
