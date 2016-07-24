@@ -10,6 +10,9 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
+		/**
+		* Checking the session and redirecting to respective pages
+		*/
 		if(isset($this->session->userdata['UserID']))
 		{
 			redirect('/welcome', 'refresh');
@@ -23,7 +26,7 @@ class Home extends CI_Controller {
 	{
 		/* Load the database model:
       	/application/models/Register.php */
-      	
+
     	$this->load->model('Register');
 
     	$result = $this->Register->RegisterUser();
