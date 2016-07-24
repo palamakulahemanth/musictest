@@ -21,7 +21,7 @@
 	<div class="intro-wrapper registrer-wrapper">
 	<!-- Registration Block goes here -->
          <form class="form-horizontal col-lg-4 col-md-5 col-sm-6 col-xs-6" role="form" id="AdminLoginForm" action="admin/login" method="POST">
-         		<div>
+         		<div class="pull-right" style="color:#a94442; font-size:13px; padding:0 0 10px 0;">
 	         		<?php
 	         			echo $this->session->flashdata('Errors');
 	         		?>
