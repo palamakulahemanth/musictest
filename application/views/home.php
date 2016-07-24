@@ -22,7 +22,7 @@
 	<!-- Registration Block goes here -->
          <form class="form-horizontal col-lg-4 col-md-5 col-sm-6 col-xs-6" role="form" id="ToneRegisterForm" action="home/register" method="POST">
          		<?php
-         			print_r($this->session->flashdata['Errors']);
+         			print_r($this->session->flashdata('Errors'));
          		?>
                 <!--h2>Registration Form</h2-->
                 <div class="form-group">

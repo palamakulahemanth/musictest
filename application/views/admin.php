@@ -20,8 +20,12 @@
 <body>
 	<div class="intro-wrapper registrer-wrapper">
 	<!-- Registration Block goes here -->
-         <form class="form-horizontal col-lg-4 col-md-5 col-sm-6 col-xs-6" role="form" id="AdminLoginForm" action="" method="POST">
-         		
+         <form class="form-horizontal col-lg-4 col-md-5 col-sm-6 col-xs-6" role="form" id="AdminLoginForm" action="admin/login" method="POST">
+         		<div>
+	         		<?php
+	         			echo $this->session->flashdata('Errors');
+	         		?>
+         		</div>
                 <!--h2>Registration Form</h2-->
                 <div class="form-group">
                     <label for="Username" class="col-sm-4 control-label">User Name : </label>

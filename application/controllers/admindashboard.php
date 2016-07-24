@@ -9,6 +9,13 @@ class AdminDashboard extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('admindashboard');
+		if(isset($this->session->userdata['EmployeeID']))
+		{
+			$this->load->view('admindashboard');
+		}else
+		{
+			redirect('/admin', 'refresh');
+		}
+
 	}
 }

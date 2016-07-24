@@ -8,7 +8,7 @@ class Home extends CI_Controller {
 	 * Develope on 19th July'2016 by Hemanth Kumar
 	 * Modified on 24th.
 	 */ 
-	
+
 	public function index()
 	{
 		/**
@@ -28,7 +28,7 @@ class Home extends CI_Controller {
 		/* Load the database model:
       	/application/models/Register.php */
 
-    	$this->load->model('Register');
+    	$this->load->model('RegisterModel');
 
     	$result = $this->Register->RegisterUser();
 

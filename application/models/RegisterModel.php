@@ -3,9 +3,9 @@
 * This class is used to handle the customer related info.
 * Develope on 19th July'2016 by Hemanth Kumar
 */
-class Register extends CI_Model
+class RegisterModel extends CI_Model
 {
-	function Register() 
+	function RegisterModel() 
   	{
     	parent::__construct();
   	}
