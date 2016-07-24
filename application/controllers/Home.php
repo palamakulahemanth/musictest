@@ -23,6 +23,7 @@ class Home extends CI_Controller {
 	{
 		/* Load the database model:
       	/application/models/Register.php */
+      	
     	$this->load->model('Register');
 
     	$result = $this->Register->RegisterUser();
