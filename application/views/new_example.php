@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     
-    <title>AIMs - Tonal Memory Next Branch</title>
+    <title>AIMs - Tonal Memory New Example Branch</title>
     <meta name="description" content="" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
