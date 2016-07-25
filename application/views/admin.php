@@ -26,6 +26,7 @@
 	         			echo $this->session->flashdata('Errors');
 	         		?>
          		</div>
+				<div class="clearfix"></div>
                 <!--h2>Registration Form</h2-->
                 <div class="form-group">
                     <label for="Username" class="col-sm-4 control-label">User Name : </label>
