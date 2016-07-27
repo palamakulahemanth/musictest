@@ -30,7 +30,7 @@
 				  <ul class="nav navbar-nav" style="float:none;">
 					<li class="active"><a href="#">Users List</a></li>
 					<li><a href="#">Test Result</a></li>
-					<li><a href="#">Upload Test Item</a></li>
+					<li><a href="<?=base_url();?>uploadquestions">Upload Test Item</a></li>
 					<li class="pull-right"><a href="#">Log Out</a></li>
 				  </ul>
 				</div><!--/.nav-collapse -->

@@ -28,9 +28,9 @@ class Home extends CI_Controller {
 		/* Load the database model:
       	/application/models/Register.php */
 
-    	$this->load->model('RegisterModel');
+    	$this->load->model('registermodel');
 
-    	$result = $this->Register->RegisterUser();
+    	$result = $this->registermodel->RegisterUser();
 
     	if(is_integer($result))
     	{

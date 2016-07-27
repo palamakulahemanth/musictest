@@ -55,5 +55,52 @@ class AdminModel extends CI_Model
 
 		}
 	}
+
+	function FetchQuestions()
+	{
+		$strQuery = 'SELECT * FROM aims_questions WHERE active = 1';
+
+		$objQuery = $this->db->query($strQuery);
+
+		if($objQuery->num_rows())
+		{
+			return $objQuery->result_array();
+		}else
+		{
+			return array();
+		}
+	}
+
+	function UploadQuestion()
+	{
+		if(sizeof($_POST))
+		{
+			$strQuestionCode = $_POST['questioncode'];
+
+			$strOptionsCount = $_POST['optionscount'];
+
+			$strQuestionLevel = $_POST['questionlevel'];
+
+			if($strQuestionCode && $strOptionsCount && $strQuestionLevel)
+			{
+				$arrData = array(
+					'questioncode'  => $strQuestionCode, 
+					'optionscount'  => $strOptionsCount,
+					'questionlevel' => $strQuestionLevel,
+					'addeddate'	    => date('Y-m-d H:m:s'),
+				);
+
+				$result = $this->db->insert('aims_questions', $arrData);
+
+				if($result)
+				{
+					return $result;
+				}else
+				{
+					return 0;
+				}
+			}
+		}
+	}
 }
 ?>
