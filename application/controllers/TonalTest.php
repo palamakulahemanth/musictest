@@ -9,6 +9,10 @@ class TonalTest extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('tonal_test');
+		$this->load->model('adminmodel');
+
+		$arrQuestions = array('Questions' => $this->adminmodel->FetchQuestions());
+
+		$this->load->view('tonal_test', $arrQuestions);
 	}
 }

@@ -22,19 +22,28 @@
     <!--link href="https://www.aimstesting.org/css/theme/font-awesome/css/font-awesome.min.css" rel="stylesheet" / -->
 	<link href="resources/css/intro.css" rel="stylesheet" />
     <script src="https://www.aimstesting.org/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    	var strBaseURL = "<?=base_url();?>";
+    	var arrQuestions = <?php echo json_encode($Questions); ?>
+    </script>
 </head>
 <body>
 	
 	<!-- Body content goes here -->
 		<section class="intro-wrapper tonal-test-wrapper">
 				<div class="container">
+					<?php foreach($Questions as $key=>$question){ if($key == 0){ ?>
 					<div class="row">
+						<input type="hidden" id="hdnQuestionNo" value="<?=$key;?>" />
+
 					 <!-- When the page loads Audio will auto play -->
                         <audio id="TestAudioData" class="audio-control" controls="controls" runat="server" autoplay>
-                               <source src='resources/audio/actual-test/row_1/row_Item_1.wav'></source>
+                               <source id="srcAudioPath" src='<?php echo base_url().$question["audiopath"];?>' ></source>
                         </audio>
+
                     <!-- Audio Play count list -->
-						 <h1 class="text-center color-white">Item 1</h1>
+						 <h1 id="h1QuestionCode" class="text-center color-white"><?=$question['questioncode'];?></h1>
 						 <!-- Acutal test starts here -->
 							<div class="tonal-test-view text-center">
 								
@@ -62,12 +71,12 @@
 							  <strong>The test will be terminated in another 20 seconds.!</strong> 
 							</div>
                     </div>
+                    <?php } } ?>
 				</div>
 		</section>
 	<!-- Body content ends here -->
 	
 	<!-- JS files will load here -->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 	<script type="text/javascript" src="resources/js/Itemtest.js"></script>
 	</body>
 </html>
