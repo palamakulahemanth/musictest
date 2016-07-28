@@ -16,23 +16,6 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`aimstonal` /*!40100 DEFAULT CHARACTER S
 
 USE `aimstonal`;
 
-/*Table structure for table `aims_answers` */
-
-DROP TABLE IF EXISTS `aims_answers`;
-
-CREATE TABLE `aims_answers` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `questionid` int(11) NOT NULL,
-  `optionid` int(11) NOT NULL,
-  `addeddate` datetime DEFAULT NULL,
-  `active` tinyint(1) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `questionid` (`questionid`),
-  KEY `optionid` (`optionid`),
-  CONSTRAINT `aims_answers_ibfk_1` FOREIGN KEY (`questionid`) REFERENCES `aims_questions` (`id`),
-  CONSTRAINT `aims_answers_ibfk_2` FOREIGN KEY (`optionid`) REFERENCES `aims_question_options` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 /*Table structure for table `aims_employees` */
 
 DROP TABLE IF EXISTS `aims_employees`;
@@ -50,22 +33,6 @@ CREATE TABLE `aims_employees` (
   UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
-/*Table structure for table `aims_question_options` */
-
-DROP TABLE IF EXISTS `aims_question_options`;
-
-CREATE TABLE `aims_question_options` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `questionid` int(11) NOT NULL,
-  `option` varchar(255) NOT NULL,
-  `option_path` varchar(255) NOT NULL,
-  `addeddate` datetime DEFAULT NULL,
-  `active` tinyint(1) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `questionid` (`questionid`),
-  CONSTRAINT `aims_question_options_ibfk_1` FOREIGN KEY (`questionid`) REFERENCES `aims_questions` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 /*Table structure for table `aims_questions` */
 
 DROP TABLE IF EXISTS `aims_questions`;
@@ -73,14 +40,18 @@ DROP TABLE IF EXISTS `aims_questions`;
 CREATE TABLE `aims_questions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `questioncode` varchar(15) NOT NULL,
-  `questionname` varchar(100) NOT NULL,
-  `questiondesc` varchar(255) NOT NULL,
+  `questionname` varchar(100) DEFAULT NULL,
+  `questiondesc` varchar(255) DEFAULT NULL,
+  `optionscount` int(2) NOT NULL,
+  `questionlevel` int(2) NOT NULL,
   `audiopath` varchar(255) NOT NULL,
-  `addeddate` datetime DEFAULT NULL,
+  `audiofilename` varchar(100) NOT NULL,
+  `answer` int(2) NOT NULL,
   `active` tinyint(1) DEFAULT '1',
+  `addeddate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `questioncode` (`questioncode`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 /*Table structure for table `aims_user_answers` */
 
@@ -97,8 +68,7 @@ CREATE TABLE `aims_user_answers` (
   KEY `questionid` (`questionid`),
   KEY `optionid` (`optionid`),
   CONSTRAINT `aims_user_answers_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `aims_users` (`id`),
-  CONSTRAINT `aims_user_answers_ibfk_2` FOREIGN KEY (`questionid`) REFERENCES `aims_questions` (`id`),
-  CONSTRAINT `aims_user_answers_ibfk_3` FOREIGN KEY (`optionid`) REFERENCES `aims_question_options` (`id`)
+  CONSTRAINT `aims_user_answers_ibfk_2` FOREIGN KEY (`questionid`) REFERENCES `aims_questions` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Table structure for table `aims_users` */
@@ -115,7 +85,7 @@ CREATE TABLE `aims_users` (
   `addeddate` datetime NOT NULL,
   `active` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 /*Table structure for table `ci_sessions` */
 

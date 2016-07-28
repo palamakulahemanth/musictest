@@ -83,11 +83,41 @@ class AdminModel extends CI_Model
 
 			if($strQuestionCode && $strOptionsCount && $strQuestionLevel)
 			{
+				$fileName = '';
+
+				if($_FILES)
+				{
+					$target_dir = "uploads/";
+
+			        $path = $target_dir.date('Ymd');
+			        
+			        if(!file_exists($path)) 
+			        {
+			        	$oldmask = umask(0);
+			        	mkdir($path, 0777);
+			        	umask($oldmask);
+			        }
+
+			        $fileName = $_FILES["audioname"]["name"];
+					
+					$target_file = $path ."/". basename($_FILES["audioname"]["name"]);
+				
+			        $target_file1 = $path."/".$fileName;
+				
+					if(!move_uploaded_file($_FILES["audioname"]["tmp_name"], $target_file1))
+			        {
+			    		return 0;
+			        }
+				}
+
 				$arrData = array(
 					'questioncode'  => $strQuestionCode, 
 					'optionscount'  => $strOptionsCount,
 					'questionlevel' => $strQuestionLevel,
 					'addeddate'	    => date('Y-m-d H:m:s'),
+					'audiopath'		=> $target_file1,
+					'audiofilename' => $fileName,
+					'answer' 		=> $_POST['answer']
 				);
 
 				$result = $this->db->insert('aims_questions', $arrData);
