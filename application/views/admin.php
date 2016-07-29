@@ -12,10 +12,11 @@
      <title>AIMs - Admin Panel</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link href="https://www.aimstesting.org/css/cssBundle?v=nmShNSQWGROX0g2mT43BGvYbmvwuhR1RZ1UlxPfS7HA1" rel="stylesheet" />
+	<link href="resources/css/cssBundle.css" rel="stylesheet" />
 	<link href="resources/css/intro.css" rel="stylesheet" />
-    <script src="https://www.aimstesting.org/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="resources/js/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
 	<div class="intro-wrapper registrer-wrapper">

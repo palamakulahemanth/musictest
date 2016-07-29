@@ -18,10 +18,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link href="https://www.aimstesting.org/css/cssBundle?v=nmShNSQWGROX0g2mT43BGvYbmvwuhR1RZ1UlxPfS7HA1" rel="stylesheet" />
+	<link href="resources/css/cssBundle.css" rel="stylesheet" />
     <!--link href="https://www.aimstesting.org/css/theme/font-awesome/css/font-awesome.min.css" rel="stylesheet" / -->
 	<link href="resources/css/intro.css" rel="stylesheet" />
-    <script src="https://www.aimstesting.org/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="resources/js/modernizr-2.6.2.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script type="text/javascript">
     	var strBaseURL = "<?=base_url();?>";
