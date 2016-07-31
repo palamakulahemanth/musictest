@@ -55,6 +55,17 @@
 										<input type="text" name="questioncode" class="form-control" placeholder="Item Code" />
 									  </div>
 								</div>
+								<div class="col-md-6 col-sm-6 col-xs-6">
+									 <div class="form-group">
+									<label for="optioncolor">Choose Options Color:</label>
+									<select name="optioncolor" class="form-control">
+										<option value="-1"></option>
+										<option value="green">Green</option>
+										<option value="blue">Blue</option>
+										<option value="red">Red</option>
+									</select>
+								  </div>
+								</div>
 						  </div>
 						  <div class="row">
 						  		<div class="col-md-6 col-sm-6 col-xs-6">

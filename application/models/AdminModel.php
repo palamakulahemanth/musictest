@@ -81,6 +81,8 @@ class AdminModel extends CI_Model
 
 			$strQuestionLevel = $_POST['questionlevel'];
 
+			$strOptionColor = $_POST['optioncolor'];
+
 			if($strQuestionCode && $strOptionsCount && $strQuestionLevel)
 			{
 				$fileName = '';
@@ -113,6 +115,7 @@ class AdminModel extends CI_Model
 				$arrData = array(
 					'questioncode'  => $strQuestionCode, 
 					'optionscount'  => $strOptionsCount,
+					'optioncolor' 	=> $strOptionColor,
 					'questionlevel' => $strQuestionLevel,
 					'addeddate'	    => date('Y-m-d H:m:s'),
 					'audiopath'		=> $target_file1,
@@ -131,6 +134,15 @@ class AdminModel extends CI_Model
 				}
 			}
 		}
+	}
+
+	function FetchUsers()
+	{
+		$strQuery = 'SELECT * FROM aims_users ORDER BY id DESC';
+
+		$objQuery = $this->db->query($strQuery);
+
+		return $objQuery->result_array();
 	}
 }
 ?>
