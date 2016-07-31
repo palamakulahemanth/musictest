@@ -12,7 +12,7 @@ class FrontEndModel extends CI_Model
 
 	function FetchQuestions()
 	{
-		$strQuery = 'SELECT * FROM aims_questions WHERE active = 1 AND optionscount = 3';
+		$strQuery = 'SELECT * FROM aims_questions WHERE active = 1 AND optionscount = 3 ORDER BY RAND() LIMIT 5';
 
 		$objQuery = $this->db->query($strQuery);
 
