@@ -9,10 +9,17 @@ class TonalTest extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->model('adminmodel');
+		$this->load->model('frontendmodel');
 
-		$arrQuestions = array('Questions' => $this->adminmodel->FetchQuestions());
+		$arrQuestions = array('Questions' => $this->frontendmodel->FetchQuestions());
 
 		$this->load->view('tonal_test', $arrQuestions);
+	}
+
+	function saveuseranswer()
+	{
+		$this->load->model('frontendmodel');
+
+		$this->frontendmodel->SaveUserAnswer();
 	}
 }

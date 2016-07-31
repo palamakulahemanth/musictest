@@ -46,19 +46,17 @@
 						 <h1 id="h1QuestionCode" class="text-center color-white"><?=$question['questioncode'];?></h1>
 						 <!-- Acutal test starts here -->
 							<div class="tonal-test-view text-center">
-								
-								 <div class="option-view">
-									 <input id="1" type="radio" name="SelectOption" class="radiobtn-custom-green custom-radio-button" />
-									 <label for="1" class="btn-green">1</label>
-								 </div>
-								 <div class="option-view">
-									 <input id="2" type="radio" name="SelectOption" class="radiobtn-custom-green custom-radio-button" />
-									 <label for="2" class="btn-green">2</label>
-								 </div>
-								 <div class="option-view">
-									 <input id="3" type="radio" name="SelectOption" class="radiobtn-custom-green custom-radio-button" />
-									 <label for="3" class="btn-green">3</label>
-								 </div>
+								<?php
+									for($intCtr = 1; $intCtr <= $question['optionscount']; $intCtr++)
+									{
+								?>
+									<div class="option-view">
+										 <input data-role-id="<?=$question['id'];?>" data-role-option="<?=$intCtr;?>" id="id_<?=$intCtr;?>" type="radio" name="SelectOption" class="radiobtn-custom-green custom-radio-button" />
+										 <label for="id_<?=$intCtr;?>" class="btn-green"><?=$intCtr;?></label>
+									 </div>
+								<?php
+									}
+								?>
 							</div>
 						 <!-- Actual test ends here -->
 							<div class="alert alert-danger text-center col-md-6 col-sm-6 col-xs-6 col-md-offset-3 col-sm-offset-3 col-xs-offset-3" style="display:none;">
