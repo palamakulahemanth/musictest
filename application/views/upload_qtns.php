@@ -30,8 +30,8 @@
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 				  <ul class="nav navbar-nav" style="float:none;">
-					<li><a href="#">Users List</a></li>
-					<li><a href="#">Test Result</a></li>
+					<li><a href="<?=base_url();?>userslist">Users List</a></li>
+					<li><a href="<?=base_url();?>usertestresult">Test Result</a></li>
 					<li class="active"><a href="#">Upload Test Item</a></li>
 					<li class="pull-right"><a href="#">Log Out</a></li>
 				  </ul>
@@ -97,6 +97,8 @@
 										<option value="2">2</option>
 										<option value="3">3</option>
 										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
 									</select>
 								  </div>
 								</div>
@@ -105,8 +107,6 @@
 										<label for="uploadFile">Test Level :</label>
 										<select name="questionlevel" class="form-control">
 										<option value="-1"></option>
-										<option value="1">1</option>
-										<option value="2">2</option>
 										<option value="3">3</option>
 										<option value="4">4</option>
 										<option value="5">5</option>
