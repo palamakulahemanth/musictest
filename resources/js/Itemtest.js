@@ -50,6 +50,8 @@ $('document').ready(function(){
 								{
 									$("#id_"+intCtr).attr('data-role-id', arrQuestions[intNextQuestion].id);
 								}
+								
+								$('.tonal-test-wrapper .tonal-test-view .option-view label').css('pointer-events','none');
 
 								audioPlay1 = document.getElementById('TestAudioData');
 
