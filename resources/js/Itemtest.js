@@ -78,7 +78,7 @@ $('document').ready(function(){
 								$("#h1QuestionCode").html(arrQuestions[intNextQuestion].questioncode);
 							}
 					
-						}, 10000);
+						}, 5000);
 					}
 				}, 3000);
 				

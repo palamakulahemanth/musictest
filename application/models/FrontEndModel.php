@@ -12,7 +12,7 @@ class FrontEndModel extends CI_Model
 
 	function FetchQuestions($p_Level)
 	{
-		$strQuery = 'SELECT * FROM aims_questions WHERE active = 1 AND questionlevel = '.$p_Level.' ORDER BY RAND() LIMIT 2';
+		$strQuery = 'SELECT * FROM aims_questions WHERE active = 1 AND questionlevel = '.$p_Level.' ORDER BY RAND() LIMIT 5';
 
 		$objQuery = $this->db->query($strQuery);
 
