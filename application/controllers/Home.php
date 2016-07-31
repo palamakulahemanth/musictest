@@ -30,6 +30,13 @@ class Home extends CI_Controller {
 		}
 	}
 
+	public function logout()
+	{
+		$this->session->session_destroy();
+		
+		redirect('/', 'refresh');
+	}
+
 	public function register()
 	{
 		/* Load the database model:

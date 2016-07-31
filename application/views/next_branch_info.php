@@ -16,7 +16,7 @@
                     <!-- Next and New example Buttons will appear once the Audio will finish -->
                         <!-- Screen to check next or new example -->
                         <div class="intro-screen-01 text-center" style="display:none;">
-                            <a href="javascript:void(0)" class="next-button">Start</a>
+                            <a href="tonaltest?level=3" class="next-button">Start</a>
                          
                         </div>
                         <!-- Screen to check next or new example ends -->
@@ -26,5 +26,5 @@
 	<!-- Body content ends here -->
 	
 	<!-- JS files will load here -->
-	<script type="text/javascript" src="resources/js/nextbranchinfo.js"></script>
+	<script type="text/javascript" src="<?=base_url();?>resources/js/nextbranchinfo.js"></script>
 <?=$Footer;?>

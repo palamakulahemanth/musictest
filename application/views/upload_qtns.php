@@ -13,11 +13,11 @@
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-		<link href="resources/css/cssBundle.css" rel="stylesheet" />
-		<link href="resources/css/admin.css" rel="stylesheet" />
+		<link href="<?=base_url();?>resources/css/cssBundle.css" rel="stylesheet" />
+		<link href="<?=base_url();?>resources/css/admin.css" rel="stylesheet" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<script type="text/javascript" src="resources/js/libraries/modernizr-2.6.2.min.js"></script>
-		<script type="text/javascript" src="resources/js/questionupload.js"></script>
+		<script type="text/javascript" src="<?=base_url();?>resources/js/libraries/modernizr-2.6.2.min.js"></script>
+		<script type="text/javascript" src="<?=base_url();?>resources/js/questionupload.js"></script>
 		</head>
 	<body>
 		

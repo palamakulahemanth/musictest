@@ -13,9 +13,9 @@
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-		<link href="resources/css/cssBundle.css" rel="stylesheet" />
-		<link href="resources/css/admin.css" rel="stylesheet" />
-		<script src="resources/js/modernizr-2.6.2.min.js"></script>
+		<link href="<?=base_url();?>resources/css/cssBundle.css" rel="stylesheet" />
+		<link href="<?=base_url();?>resources/css/admin.css" rel="stylesheet" />
+		<script src="<?=base_url();?>resources/js/modernizr-2.6.2.min.js"></script>
 		</head>
 	<body>
 		

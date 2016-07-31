@@ -31,14 +31,19 @@ $('document').ready(function(){
 						}, 5000);										
 					}else
 					{
+						fnSaveUserAnswer($("input.custom-radio-button:checked").attr("data-role-id"), $("input.custom-radio-button:checked").attr("data-role-option"));
+						
 						setTimeout(function(){
-							$('.alert-success').fadeIn().delay(5000).fadeOut(400);
+							//$('.alert-success').fadeIn().delay(5000).fadeOut(400);
 
-							fnSaveUserAnswer($("input.custom-radio-button:checked").attr("data-role-id"), $("input.custom-radio-button:checked").attr("data-role-option"));
+							if((parseInt($("#hdnQuestionNo").val())+1) == arrQuestions.length)
+							{
+								$('.NextButtonWrapper').show();
+							}
 
 							var intNextQuestion = parseInt($("#hdnQuestionNo").val())+1;
 
-							if(arrQuestions.length >= intNextQuestion)
+							if(arrQuestions.length > intNextQuestion)
 							{
 								$("#hdnQuestionNo").val(intNextQuestion);
 

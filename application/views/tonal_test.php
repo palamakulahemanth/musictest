@@ -43,13 +43,24 @@
             </div>
             <?php } } ?>
 		</div>
-		
-			<div class="NextButtonWrapper">
-				<a href="javascript:void(0)">Next</a> 
-			</div>
+		<?php
+			$arrAvailableLevels = $this->config->item('AvailableLevels'); 
+
+			$intNextLevel = $CurrentLevel+1;
+
+			$hasNextLevel = false;
+
+			if(in_array($intNextLevel, $arrAvailableLevels))
+			{
+				$hasNextLevel = true;
+			}
+		?>
+		<div class="NextButtonWrapper" style="display:none;">
+			<a href="<?php if($hasNextLevel){ echo base_url().'introlevel/?level='.$intNextLevel; }else{ echo base_url().'home/logout'; } ?>" ><?php if($hasNextLevel){ echo "Next"; }else{ echo "Finish"; } ?></a> 
+		</div>
 </section>
 <!-- Body content ends here -->
 
 <!-- JS files will load here -->
-<script type="text/javascript" src="resources/js/Itemtest.js"></script>
+<script type="text/javascript" src="<?=base_url();?>resources/js/Itemtest.js"></script>
 <?=$Footer;?>

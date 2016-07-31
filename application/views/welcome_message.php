@@ -29,5 +29,5 @@
 	<!-- Body content ends here -->
 	
 	<!-- JS files will load here -->
-	<script type="text/javascript" src="resources/js/intro.js"></script>
+	<script type="text/javascript" src="<?=base_url();?>resources/js/intro.js"></script>
 <?=$Footer;?>
