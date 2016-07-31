@@ -43,6 +43,10 @@
             </div>
             <?php } } ?>
 		</div>
+		
+			<div class="NextButtonWrapper">
+				<a href="javascript:void(0)">Next</a> 
+			</div>
 </section>
 <!-- Body content ends here -->
 
