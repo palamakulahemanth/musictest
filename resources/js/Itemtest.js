@@ -51,7 +51,7 @@ $('document').ready(function(){
 
 								$("input.custom-radio-button").attr("checked",false);
 
-								for(var intCtr = 1; intCtr<= arrQuestions[intNextQuestion].optionscount; intCtr++)
+								/*for(var intCtr = 1; intCtr<= arrQuestions[intNextQuestion].optionscount; intCtr++)
 								{
 									$("#id_"+intCtr).attr('data-role-id', arrQuestions[intNextQuestion].id);
 
@@ -67,7 +67,7 @@ $('document').ready(function(){
 
 									$("#lbl_"+intCtr).addClass('btn-'+arrQuestions[intNextQuestion].optioncolor);
 
-								}
+								}*/
 								
 								$('.tonal-test-wrapper .tonal-test-view .option-view label').css('pointer-events','none');
 
