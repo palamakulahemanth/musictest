@@ -54,6 +54,19 @@ $('document').ready(function(){
 								for(var intCtr = 1; intCtr<= arrQuestions[intNextQuestion].optionscount; intCtr++)
 								{
 									$("#id_"+intCtr).attr('data-role-id', arrQuestions[intNextQuestion].id);
+
+									$strOldClass = $("#id_"+intCtr).attr('class');
+
+									$("#id_"+intCtr).removeClass($strOldClass);
+
+									$("#id_"+intCtr).addClass('radiobtn-custom-'+arrQuestions[intNextQuestion].optioncolor);
+
+									$strLblClass = $("#lbl_"+intCtr).attr("class");
+
+									$("#lbl_"+intCtr).removeClass($strLblClass);
+
+									$("#lbl_"+intCtr).addClass('btn-'+arrQuestions[intNextQuestion].optioncolor);
+
 								}
 								
 								$('.tonal-test-wrapper .tonal-test-view .option-view label').css('pointer-events','none');
