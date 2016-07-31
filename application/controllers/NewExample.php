@@ -14,7 +14,15 @@ class NewExample extends CI_Controller {
 			redirect('/', 'refresh');
 		}else
 		{
-			$this->load->view('new_example');
+			$arrData['Title'] = 'AIMS - Test';
+
+			$Header = $this->load->view('header', $arrData,true);
+
+			$arrData['Header'] = $Header;
+
+			$arrData['Footer'] = $this->load->view('footer', $arrData,true);
+
+			$this->load->view('new_example', $arrData);
 		}
 	}
 }

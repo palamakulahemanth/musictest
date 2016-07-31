@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class TonalTest extends CI_Controller {
-
+	
 	/**
 	 * This is TonalTest page controller.
 	 * Develope on 21th July'2016 by Hemanth Kumar
@@ -11,9 +11,17 @@ class TonalTest extends CI_Controller {
 	{
 		$this->load->model('frontendmodel');
 
-		$arrQuestions = array('Questions' => $this->frontendmodel->FetchQuestions());
+		$arrData['Title'] = 'AIMS - Test';
 
-		$this->load->view('tonal_test', $arrQuestions);
+		$Header = $this->load->view('header', $arrData,true);
+
+		$arrData['Header'] = $Header;
+
+		$arrData['Footer'] = $this->load->view('footer', $arrData,true);
+
+		$arrData['Questions'] = $this->frontendmodel->FetchQuestions();
+
+		$this->load->view('tonal_test', $arrData);
 	}
 
 	function saveuseranswer()

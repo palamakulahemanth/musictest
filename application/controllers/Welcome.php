@@ -25,7 +25,15 @@ class Welcome extends CI_Controller {
 			redirect('/', 'refresh');
 		}else
 		{
-			$this->load->view('welcome_message');
+			$arrData['Title'] = 'AIMs - Tonal Memory Registration Form';
+
+			$Header = $this->load->view('header', $arrData,true);
+			
+			$arrData['Header'] = $Header;
+
+			$arrData['Footer'] = $this->load->view('footer', $arrData,true);
+
+			$this->load->view('welcome_message', $arrData);
 		}
 	}
 }

@@ -1,8 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
-
+class Home extends CI_Controller {	
 	/**
 	 * This is Home page controller.
 	 * Develope on 19th July'2016 by Hemanth Kumar
@@ -19,7 +18,15 @@ class Home extends CI_Controller {
 			redirect('/welcome', 'refresh');
 		}else
 		{
-			$this->load->view('home');
+			$arrData['Title'] = 'AIMs - Tonal Memory Registration Form';
+
+			$Header = $this->load->view('header', $arrData,true);
+
+			$arrData['Header'] = $Header;
+
+			$arrData['Footer'] = $this->load->view('footer', $arrData,true);
+
+			$this->load->view('home', $arrData);
 		}
 	}
 

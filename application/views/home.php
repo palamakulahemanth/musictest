@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>   <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>      <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>      <html class="no-js lt-ie9"> <![endif]-->
-<!--[if IE 9]>      <html class="no-js ie9"> <![endif]-->
-<!--[if gt IE 9]><!-->
-<html class="no-js">
-<!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <title>AIMs - Tonal Memory Registration Form</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link href="resources/css/cssBundle.css" rel="stylesheet" />
-	<link href="resources/css/intro.css" rel="stylesheet" />
-    <script src="resources/js/modernizr-2.6.2.min.js"></script>
-</head>
-<body>
+<?=$Header;?>
 	<div class="intro-wrapper registrer-wrapper">
 	<!-- Registration Block goes here -->
          <form class="form-horizontal col-lg-4 col-md-5 col-sm-6 col-xs-6" role="form" id="ToneRegisterForm" action="home/register" method="POST">
@@ -160,5 +141,4 @@
 				});
 			});
 		</script>
-	</body>
-</html>
+<?=$Footer;?>
