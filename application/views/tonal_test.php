@@ -23,8 +23,8 @@
 							{
 						?>
 							<div class="option-view">
-								 <input data-role-id="<?=$question['id'];?>" data-role-option="<?=$intCtr;?>" id="id_<?=$intCtr;?>" type="radio" name="SelectOption" class="radiobtn-custom-green custom-radio-button" />
-								 <label for="id_<?=$intCtr;?>" class="btn-green"><?=$intCtr;?></label>
+								 <input data-role-id="<?=$question['id'];?>" data-role-option="<?=$intCtr;?>" id="id_<?=$intCtr;?>" type="radio" name="SelectOption" class="radiobtn-custom-<?=$question['optioncolor']?> custom-radio-button" />
+								 <label for="id_<?=$intCtr;?>" class="btn-<?=$question['optioncolor']?>"><?=$intCtr;?></label>
 							 </div>
 						<?php
 							}
