@@ -11,6 +11,23 @@
 		$hasNextLevel = true;
 	}
 ?>
+<?php
+	if($CurrentLevel == 4)
+	{
+?>
+	Level four content goes Here
+<?php
+	}elseif($CurrentLevel == 5){
+?>
+	Level five content goes here
+<?php
+	}elseif($CurrentLevel == 6){
+?>
+	Level six content goes here.
+<?php
+	}
+?>
+
 	<!-- Body content goes here -->
 		<section class="intro-wrapper">
 				<div class="container">
