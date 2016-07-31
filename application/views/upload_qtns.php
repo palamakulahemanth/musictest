@@ -62,7 +62,7 @@
 										<option value="-1"></option>
 										<option value="green">Green</option>
 										<option value="blue">Blue</option>
-										<option value="red">Red</option>
+										<option value="yellow">yellow</option>
 									</select>
 								  </div>
 								</div>
