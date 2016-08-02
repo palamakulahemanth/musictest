@@ -31,13 +31,13 @@
 						?>
 					</div>
 				 <!-- Actual test ends here -->
-					<div class="alert alert-danger text-center col-md-6 col-sm-6 col-xs-6 col-md-offset-3 col-sm-offset-3 col-xs-offset-3" style="display:none;">
+					<div class="alert alert-danger text-center col-md-6 col-sm-6 col-xs-6 col-md-offset-3 col-sm-offset-3 col-xs-offset-3" style="display:none; position:absolute;">
 					  <strong>why haven’t you made a response!</strong> 
 					</div>
-					<div class="alert alert-warning text-center col-md-4 col-sm-4 col-xs-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4" style="display:none;">
+					<div class="alert alert-warning text-center col-md-4 col-sm-4 col-xs-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4" style="display:none; position:absolute;">
 					  <strong>Make a guess!</strong> 
 					</div>
-					<div class="alert alert-success text-center col-md-4 col-sm-4 col-xs-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4" style="display:none;">
+					<div class="alert alert-success text-center col-md-4 col-sm-4 col-xs-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4" style="display:none; position:absolute;">
 					  <strong>The test will be terminated in another 20 seconds.!</strong> 
 					</div>
             </div>
