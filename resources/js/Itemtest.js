@@ -1,4 +1,7 @@
 var showAlert;
+
+var showGuessAlert;
+
 function fnSaveUserAnswer(questionid, selectedoption)
 {
 	$.ajax({
@@ -15,9 +18,11 @@ function fnShowAlert()
 {
 	clearInterval(showAlert);
 
+	clearTimeout(showGuessAlert);
+
 	$('.alert-danger').fadeIn().delay(4000).fadeOut(400);
 			
-	setTimeout(function(){
+	showGuessAlert = setTimeout(function(){
 		$('.alert-warning').fadeIn().delay(4000).fadeOut(400);
 	}, 5000);
 }
@@ -30,6 +35,11 @@ $('document').ready(function(){
 		   var audioPlay = document.getElementById('TestAudioData');
 		  // Attaches an event ended and it gets fired when current playing song get ended
 		   audioPlay.addEventListener('ended', function() {
+
+		   		clearInterval(showAlert);
+
+				clearTimeout(showGuessAlert);
+
 				$('.tonal-test-wrapper .tonal-test-view .option-view label').css('pointer-events','inherit');
 
 				showAlert = setInterval(function(){
@@ -41,12 +51,15 @@ $('document').ready(function(){
    },6000);
 
    $("input.custom-radio-button").bind('click', function()
-	{
+	{	
+
 		if(!$("input.custom-radio-button:checked").val()) {
 			fnShowAlert();			
 		}else
 		{
 			clearInterval(showAlert);
+
+			clearTimeout(showGuessAlert);
 
 			fnSaveUserAnswer($("input.custom-radio-button:checked").attr("data-role-id"), $("input.custom-radio-button:checked").attr("data-role-option"));
 			
@@ -76,6 +89,8 @@ $('document').ready(function(){
 						$("#id_"+intCtr).removeClass($strOldClass);
 
 						$("#id_"+intCtr).addClass('radiobtn-custom-'+arrQuestions[intNextQuestion].optioncolor);
+
+						$("#id_"+intCtr).addClass('custom-radio-button');
 
 						$strLblClass = $("#lbl_"+intCtr).attr("class");
 
