@@ -109,7 +109,7 @@ $('document').ready(function(){
 					$("#h1QuestionCode").html(arrQuestions[intNextQuestion].questioncode);
 				}
 		
-			}, 5000);
+			}, 3000);
 		}
 	});
 
