@@ -100,11 +100,13 @@ class AdminModel extends CI_Model
 			        	umask($oldmask);
 			        }
 
-			        $fileName = $_FILES["audioname"]["name"];
+			        $fileInfo = pathinfo($_FILES["audioname"]["name"]);
+			        
+			        $strNewFileName = date('YmdHis').'.'.$fileInfo['extension'];
 					
 					$target_file = $path ."/". basename($_FILES["audioname"]["name"]);
 				
-			        $target_file1 = $path."/".$fileName;
+			        $target_file1 = $path."/".$strNewFileName;
 				
 					if(!move_uploaded_file($_FILES["audioname"]["tmp_name"], $target_file1))
 			        {
@@ -119,7 +121,7 @@ class AdminModel extends CI_Model
 					'questionlevel' => $strQuestionLevel,
 					'addeddate'	    => date('Y-m-d H:m:s'),
 					'audiopath'		=> $target_file1,
-					'audiofilename' => $fileName,
+					'audiofilename' => $strNewFileName,
 					'answer' 		=> $_POST['answer']
 				);
 
