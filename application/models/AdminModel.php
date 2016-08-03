@@ -146,5 +146,24 @@ class AdminModel extends CI_Model
 
 		return $objQuery->result_array();
 	}
+
+	function _userResults($id_user)
+	{
+		$strQuery = 'SELECT ua.`questionid`, ua.`optionid`, q.`answer` FROM aims_user_answers ua INNER JOIN aims_questions q ON q.id = ua.`questionid` WHERE userid = '.$id_user;
+
+		$objQuery = $this->db->query($strQuery);
+
+		return $objQuery->result_array();
+	}
+
+	function FetchTestResult()
+	{
+		$arrUsers = $this->FetchUsers();
+		foreach ($arrUsers as $key => &$value) {
+			$value['test_result'] = $this->_userResults($value['id']);
+		}
+		
+		return $arrUsers;
+	}
 }
 ?>

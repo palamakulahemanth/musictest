@@ -9,6 +9,10 @@ class UserTestResult extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('user_test_result');
+		$this->load->model('adminmodel');
+
+		$arrData['TestResults'] = $this->adminmodel->FetchTestResult();
+
+		$this->load->view('user_test_result', $arrData);
 	}
 }
