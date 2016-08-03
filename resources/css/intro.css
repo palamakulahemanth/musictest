@@ -19,7 +19,7 @@ html, body{height: 100%;}
 	display: inline-block;
 	padding: 30px 50px;
 	background: orange;
-	background-image: linear-gradient(#010d14,#1aed33);
+	background-image: linear-gradient(#1b7323,#18a328);
 	text-decoration: none;
 	color: #fff;
 	font-size: 30px;
@@ -40,7 +40,7 @@ html, body{height: 100%;}
 }
 
 .next-button:hover{
-	background: linear-gradient(#290b57,#9e1c0b); color:#fff; text-decoration: none;
+	background: linear-gradient(#5e0720,#9e1c0b); color:#fff; text-decoration: none;
 }
 
 .blue-button{
