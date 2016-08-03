@@ -50,270 +50,68 @@
 								</tr>
 								</thead>
 								<tbody>
+								<?php
+									foreach ($TestResults as $key => $value) {
+								?>
 								<tr>
-									<td valign="middle">Ravi</td>
-									<td valign="middle">24</td>
-									<td valign="middle">D-2016-2016</td>
+									<td valign="middle"><?=$value['firstname'];?></td>
+									<td valign="middle"><?=$value['age'];?></td>
+									<td valign="middle"><?=$value['filenumber'];?></td>
 									<td>
 										<table width="100%" cellspacing="0" cellpadding="0" class="table table-bordered">
 											<tr>
 												<td width="10%">Correct Answer</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">4</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">4</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">4</td>
-												<td width="2.3%">5</td>
-												<td width="2.3%">5</td>
-												<td width="2.3%">4</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">5</td>
-												<td width="2.3%">5</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">4</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">5</td>
-												<td width="2.3%">5</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">6</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">6</td>
-												<td width="2.3%">4</td>
-												<td width="2.3%">2</td>
+												<?php
+													for($intCtr = 0; $intCtr < count($value['test_result']); $intCtr++){
+												?>
+												<td width="2.3%"><?=$value['test_result'][$intCtr]['answer'];?>
+												</td>
+												<?php } ?>
 											</tr>
 										</table>
 										<table width="100%" cellspacing="0" cellpadding="0" class="table table-bordered">
 											<tr>
 												<td width="10%">Responses</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">4</td>
-												<td width="2.3%">5</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">5</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">6</td>
-												<td width="2.3%">5</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">4</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">5</td>
-												<td width="2.3%">6</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">6</td>
-												<td width="2.3%">1</td>
+												<?php
+													for($intCtr = 0; $intCtr< sizeof($value['test_result']); $intCtr++){
+												?>
+												<td width="2.3%"><?=$value['test_result'][$intCtr]['optionid'];?>
+												</td>
+												<?php } ?>
 											</tr>
 										</table>
 										<table width="100%" cellspacing="0" cellpadding="0" class="table table-bordered">
 											<tr>
 												<td width="10%">Points</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">0</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">0</td>
-												<td width="2.3%">0</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">0</td>
-												<td width="2.3%">0</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">0</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">0</td>
-												<td width="2.3%">0</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">0</td>
-												<td width="2.3%">1</td>
+												<?php
+													$intCorrectAnswer = 0;
+													for($intCtr = 0; $intCtr< sizeof($value['test_result']); $intCtr++){
+												?>
+												<td width="2.3%">
+													<?php
+														if($value['test_result'][$intCtr]['answer'] == $value['test_result'][$intCtr]['optionid'])
+														{
+															$intCorrectAnswer = $intCorrectAnswer+1;
+															echo 1;
+														}else
+														{
+															echo 0;
+														}
+													?>
+												</td>
+												<?php } ?>
 											</tr>
 										</table>
 										<table width="100%" cellpadding="0" cellspacing="0">
 											<tr>
-												<td align="right" style="padding:10px;">Item Score : <strong>28 (35 questions)</strong></td>
+												<td align="right" style="padding:10px;">Item Score : <strong><?=$intCorrectAnswer;?> (<?=sizeof($value['test_result']);?> questions)</strong></td>
 											</tr>
 										</table>
 									</td>
-								</tr>
-								<tr>
-									<td valign="middle">Male</td>
-									<td valign="middle">24</td>
-									<td valign="middle">D-2016-2016</td>
-									<td>
-										<table width="100%" cellspacing="0" cellpadding="0" class="table table-bordered">
-											<tr>
-												<td width="10%">Correct Answer</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">4</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">4</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">4</td>
-												<td width="2.3%">5</td>
-												<td width="2.3%">5</td>
-												<td width="2.3%">4</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">5</td>
-												<td width="2.3%">5</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">4</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">5</td>
-												<td width="2.3%">5</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">6</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">6</td>
-												<td width="2.3%">4</td>
-												<td width="2.3%">2</td>
-											</tr>
-										</table>
-										<table width="100%" cellspacing="0" cellpadding="0" class="table table-bordered">
-											<tr>
-												<td width="10%">Responses</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">4</td>
-												<td width="2.3%">5</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">3</td>
-												<td width="2.3%">5</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">6</td>
-												<td width="2.3%">5</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">4</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">2</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">5</td>
-												<td width="2.3%">6</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">6</td>
-												<td width="2.3%">1</td>
-											</tr>
-										</table>
-										<table width="100%" cellspacing="0" cellpadding="0" class="table table-bordered">
-											<tr>
-												<td width="10%">Points</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">0</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">0</td>
-												<td width="2.3%">0</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">0</td>
-												<td width="2.3%">0</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">0</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">0</td>
-												<td width="2.3%">0</td>
-												<td width="2.3%">1</td>
-												<td width="2.3%">0</td>
-												<td width="2.3%">1</td>
-											</tr>
-										</table>
-										<table width="100%" cellpadding="0" cellspacing="0">
-											<tr>
-												<td align="right" style="padding:10px;">Item Score : <strong>25 (35 questions)</strong></td>
-											</tr>
-										</table>
-									</td>
-								</tr>
+								</tr>	
+								<?php
+									}
+								?>
 								</tbody>
 							</table>
 					</div>
