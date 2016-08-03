@@ -4,7 +4,7 @@
 					var innerHTML = "<source src='audio/new-example/1.wav'></source>";
 					ctrlaudioNewExample.InnerHtml = innerHTML;
 					hdTuneMoreInfoNames = "audio/new-example/1.wav" + "," + "audio/new-example/2.wav" + "," + "audio/new-example/3.wav" + "," + "audio/new-example/4.wav" + "," + "audio/new-example/5.wav" + "," + "audio/new-example/6.wav" + "," + "audio/new-example/7.wav";
-					hdImgNames = "img/new-example/1.jpg" + "," + "img/new-example/2.jpg" + "," + "img/new-example/3.gif" + "," + "img/new-example/4.jpg" + "," + "img/new-example/5.jpg" + "," + "img/new-example/6.gif" + "," + "img/new-example/7new.jpg";
+					hdImgNames = "img/new-example/1.jpg" + "," + "img/new-example/2.jpg" + "," + "img/new-example/3.gif" + "," + "img/new-example/4.jpg" + "," + "img/new-example/5.jpg" + "," + "img/new-example/6.gif" + "," + "img/new-example/71.jpg";
 					$(function () {
 					 //Find the audio control on the page
 					   var audio = document.getElementById('ctrlaudioNewExample');
