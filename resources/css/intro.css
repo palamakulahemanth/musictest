@@ -82,7 +82,7 @@ html, body{height: 100%;}
 	/** Registration form ends **/
 	
   /*** Acutal test UI starts here ***/
-	.tonal-test-wrapper h1{font-size:40px; font-weight:normal;}
+	.tonal-test-wrapper h1{font-size:16px; font-weight:normal; position:fixed; bottom:20px; right:20px;}
 	.tonal-test-wrapper .tonal-test-view{margin:50px 0;}
 	.tonal-test-wrapper .tonal-test-view .option-view{display:inline-block; margin:20px;}
 	.tonal-test-wrapper .tonal-test-view .option-view label{font-size:40px; padding:35px 55px; pointer-events:none;}
