@@ -42,4 +42,21 @@ class UploadQuestions extends CI_Controller {
 			redirect('/uploadquestions', 'refresh');
 		}
 	}
+
+	function deletequestion()
+	{
+		$this->load->model('adminmodel');
+
+		$result = $this->adminmodel->DeleteQuestion();
+
+		if($result)
+		{
+			redirect('/uploadquestions', 'refresh');
+		}else
+		{
+			$this->session->set_flashdata('Errors', array('Unable to upload question. Please try again later.'));
+
+			redirect('/uploadquestions', 'refresh');
+		}
+	}
 }

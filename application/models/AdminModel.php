@@ -83,11 +83,15 @@ class AdminModel extends CI_Model
 
 			$strOptionColor = $_POST['optioncolor'];
 
+			$target_file1 = false;
+
+			$strNewFileName = false;
+
 			if($strQuestionCode && $strOptionsCount && $strQuestionLevel)
 			{
 				$fileName = '';
 
-				if($_FILES)
+				if($_FILES && $_POST['id'] === -1)
 				{
 					$target_dir = "uploads/";
 
@@ -114,18 +118,39 @@ class AdminModel extends CI_Model
 			        }
 				}
 
-				$arrData = array(
-					'questioncode'  => $strQuestionCode, 
-					'optionscount'  => $strOptionsCount,
-					'optioncolor' 	=> $strOptionColor,
-					'questionlevel' => $strQuestionLevel,
-					'addeddate'	    => date('Y-m-d H:m:s'),
-					'audiopath'		=> $target_file1,
-					'audiofilename' => $strNewFileName,
-					'answer' 		=> $_POST['answer']
-				);
+				if($_POST['id'] == -1)
+				{
+					$arrData = array(
+						'questioncode'  => $strQuestionCode, 
+						'optionscount'  => $strOptionsCount,
+						'optioncolor' 	=> $strOptionColor,
+						'questionlevel' => $strQuestionLevel,
+						'addeddate'	    => date('Y-m-d H:m:s'),
+						'audiopath'		=> $target_file1,
+						'audiofilename' => $strNewFileName,
+						'answer' 		=> $_POST['answer']
+					);
+				}else
+				{
+					$arrData = array(
+						'questioncode'  => $strQuestionCode, 
+						'optionscount'  => $strOptionsCount,
+						'optioncolor' 	=> $strOptionColor,
+						'questionlevel' => $strQuestionLevel,
+						'answer' 		=> $_POST['answer']
+					);
+				}
 
-				$result = $this->db->insert('aims_questions', $arrData);
+				if($_POST['id'] == -1)
+				{
+					$result = $this->db->insert('aims_questions', $arrData);
+				}
+				else
+				{
+					$this->db->where('id', $_POST['id']);
+
+					$result = $this->db->update('aims_questions', $arrData);
+				}
 
 				if($result)
 				{
@@ -164,6 +189,25 @@ class AdminModel extends CI_Model
 		}
 		
 		return $arrUsers;
+	}
+
+	function DeleteQuestion()
+	{
+		$id = $_POST['questionid'];
+
+		if($id)
+		{
+			$arrData = array(
+                'active' => 0
+            );
+
+	 		$this->db->where('id', $id);
+
+			$this->db->update('aims_questions', $arrData);
+		}else
+		{
+			return false;
+		}
 	}
 }
 ?>

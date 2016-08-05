@@ -18,6 +18,10 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script type="text/javascript" src="<?=base_url();?>resources/js/libraries/modernizr-2.6.2.min.js"></script>
 		<script type="text/javascript" src="<?=base_url();?>resources/js/questionupload.js"></script>
+		<script type="text/javascript">
+			var strBaseURL = "<?=base_url();?>";
+			var arrQuestions = <?php echo json_encode($Questions); ?>
+		</script>
 		</head>
 	<body>
 		
@@ -49,16 +53,17 @@
 		         		</div>
 						<form role="form" class="col-m-8 col-sm-8 col-xs-8 col-md-offset-2 col-sm-offset-2 col-xs-offset-2" method="POST" action="uploadquestions/uploadquestion" enctype="multipart/form-data" onsubmit="fnValidateQuestionUpload();">
 						<div class="row">
+								<input type="hidden" name="id" value="-1" id="hdnQuestionID">
 								<div class="col-md-6 col-sm-12 col-xs-12">
 									<div class="form-group">
 										<label for="uploadFile">Item Code:</label>
-										<input type="text" name="questioncode" class="form-control" placeholder="Item Code" />
+										<input type="text" id="sleItemCode" name="questioncode" class="form-control" placeholder="Item Code" />
 									  </div>
 								</div>
 								<div class="col-md-6 col-sm-6 col-xs-6">
 									 <div class="form-group">
 									<label for="optioncolor">Choose Options Color:</label>
-									<select name="optioncolor" class="form-control">
+									<select name="optioncolor" id="cboOptionColor" class="form-control">
 										<option value="-1"></option>
 										<option value="green">Green</option>
 										<option value="blue">Blue</option>
@@ -71,7 +76,7 @@
 						  		<div class="col-md-6 col-sm-6 col-xs-6">
 									 <div class="form-group">
 									<label for="email">Choose Options count to show:</label>
-									<select name="optionscount" class="form-control">
+									<select name="optionscount" id="cboOptionCount" class="form-control">
 										<option value="-1"></option>
 										<option value="3">3</option>
 										<option value="4">4</option>
@@ -83,7 +88,7 @@
 								<div class="col-md-6 col-sm-12 col-xs-12">
 									<div class="form-group">
 										<label for="uploadFile">Please Upload Audio:</label>
-										<input name="audioname" type="file" class="form-control" id="uploadFile" />
+										<input name="audioname" id="sleFile" type="file" class="form-control" id="uploadFile" />
 									  </div>
 								</div>
 						  </div>
@@ -91,7 +96,7 @@
 								<div class="col-md-6 col-sm-6 col-xs-6">
 									 <div class="form-group">
 									<label for="email">Choose correct Answer:</label>
-									<select name="answer" class="form-control">
+									<select name="answer" id="cboCorrectAnswer" class="form-control">
 										<option value="-1"></option>
 										<option value="1">1</option>
 										<option value="2">2</option>
@@ -105,7 +110,7 @@
 								<div class="col-md-6 col-sm-6 col-xs-6">
 									<div class="form-group">
 										<label for="uploadFile">Test Level :</label>
-										<select name="questionlevel" class="form-control">
+										<select name="questionlevel" id="cboQuestionLevel" class="form-control">
 										<option value="-1"></option>
 										<option value="3">3</option>
 										<option value="4">4</option>
@@ -135,7 +140,7 @@
 								</thead>
 								<tbody>
 									<?php
-										foreach($Questions as $question)
+										foreach($Questions as $key => $question)
 										{
 									?>
 										<tr>
@@ -144,7 +149,10 @@
 											<td><?=$question['optionscount'];?></td>
 											<td><?=$question['answer'];?></td>
 											<td><?=$question['questionlevel'];?></td>
-											<td><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal">Edit</a> <a href="javascript:void(0)" class="delete-btn">Delete</a></td>
+											<td>
+												<a href="javascript:void(0)" class="edit" data-index="<?=$key;?>" data-questionid="<?=$question['id'];?>" id="aEditQuestion" >Edit</a> 
+												<a href="javascript:void(0)" class="delete-btn" onclick=fnDeleteQuestion("<?=$question['id'];?>");>Delete</a>
+											</td>
 										</tr>
 									<?php
 										}
