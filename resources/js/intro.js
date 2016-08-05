@@ -3,7 +3,7 @@
 					ctrlaudio.InnerHtml = innerHTML;
 					//ctrlcount.InnerHtml = innerHTML;
 					hdTuneNames = "audio/introduction/1.wav" + "," + "audio/introduction/2.wav" + "," + "audio/introduction/3.wav" + "," + "audio/introduction/4.wav" + "," + "audio/introduction/5.wav";
-					hdImgNames = "img/introduction/12.jpg" + "," + "img/introduction/2.jpg" + "," + "img/introduction/3.jpg" + "," + "img/introduction/4.jpg" + "," + "img/introduction/51.jpg";
+					hdImgNames = "img/introduction/12.jpg" + "," + "img/introduction/2.jpg" + "," + "img/introduction/3.jpg" + "," + "img/introduction/4.jpg" + "," + "img/introduction/52.jpg";
 					$(function () {
 					 //Find the audio control on the page
 					   var audio = document.getElementById('ctrlaudio');

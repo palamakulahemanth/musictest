@@ -2,7 +2,7 @@
 					var innerHTML = "<source src='audio/next-branch/1.wav'></source>";
 					ctrlaudioNextBranch.InnerHtml = innerHTML;
 					hdTuneNames = "audio/next-branch/1.wav" + "," + "audio/next-branch/2.wav" + "," + "audio/next-branch/3.wav";
-					hdImgNames = "img/next/1.jpg" + "," + "img/next/6.gif" + "," + "img/next/mainSI.jpg";
+					hdImgNames = "img/next/1.jpg" + "," + "img/next/6.gif" + "," + "img/next/7.jpg";
 					
 					$(function () {
 					 //Find the audio control on the page
