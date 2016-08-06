@@ -18,24 +18,47 @@ class Thankyou extends CI_Controller {
 
 			$arrData['Footer'] = $this->load->view('footer', $arrData,true);
 
-			$this->load->model('frontendmodel');
+			if(isset($this->session->userdata['UserID']))
+			{
+				$this->load->model('frontendmodel');
 
-			$arrResult = $this->frontendmodel->FetchResult();
+				$arrResult = $this->frontendmodel->FetchResult();
 
-			$strCounter = 0;
+				$intCounter = 0;
 
-			foreach ($arrResult as $key => $value) {
-				if($value['result'])
-				{
-					$strCounter = $strCounter + 1;
+				foreach ($arrResult as $key => $value) {
+					if($value['result'])
+					{
+						$intCounter = $intCounter + 1;
+					}
 				}
+
+				$arrData['NoOfQtsAttempted'] = sizeof($arrResult);
+
+				$arrData['CorrectAns'] = $intCounter;
+
+				$percentage = (($intCounter*100)/sizeof($arrResult));
+
+				if($percentage < 30)
+					$strGrade = "Week";
+				elseif($percentage >= 30 && $percentage < 70)
+					$strGrade = "Average";
+				elseif($percentage >= 70)
+					$strGrade = "Strong";
+
+				$arrData['Grade'] = $strGrade;
+
+				$this->load->view('thankyou', $arrData); 
+			}else
+			{
+				redirect('/', 'refresh');
 			}
+	}
 
-			$arrData['NoOfQtsAttempted'] = sizeof($arrResult);
+	function logout()
+	{
+		$this->session->unset_userdata('UserID');
 
-			$arrData['CorrectAns'] = $strCounter;
-
-			$this->load->view('thankyou', $arrData);  
-		
+		echo json_encode(array('Status' => true));
 	}
 }

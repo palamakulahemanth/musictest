@@ -9,28 +9,34 @@ class TonalTest extends CI_Controller {
 	 */
 	public function index()
 	{
-		if(isset($_GET['level']))
+		if(isset($this->session->userdata['UserID']))
 		{
-			$p_Level = $_GET['level'];
+			if(isset($_GET['level']))
+			{
+				$p_Level = $_GET['level'];
+			}else
+			{
+				$p_Level = 3;
+			}
+			$this->load->model('frontendmodel');
+
+			$arrData['Title'] = 'AIMS - Test';
+
+			$Header = $this->load->view('header', $arrData,true);
+
+			$arrData['Header'] = $Header;
+
+			$arrData['Footer'] = $this->load->view('footer', $arrData,true);
+
+			$arrData['Questions'] = $this->frontendmodel->FetchQuestions($p_Level);
+
+			$arrData['CurrentLevel'] = $p_Level;
+
+			$this->load->view('tonal_test', $arrData);
 		}else
 		{
-			$p_Level = 3;
+			redirect('/', 'refresh');
 		}
-		$this->load->model('frontendmodel');
-
-		$arrData['Title'] = 'AIMS - Test';
-
-		$Header = $this->load->view('header', $arrData,true);
-
-		$arrData['Header'] = $Header;
-
-		$arrData['Footer'] = $this->load->view('footer', $arrData,true);
-
-		$arrData['Questions'] = $this->frontendmodel->FetchQuestions($p_Level);
-
-		$arrData['CurrentLevel'] = $p_Level;
-
-		$this->load->view('tonal_test', $arrData);
 	}
 
 	function saveuseranswer()
