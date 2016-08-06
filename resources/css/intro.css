@@ -171,3 +171,6 @@ html, body{height: 100%;}
 .NextButtonWrapper a{padding:10px 30px; position: absolute; bottom: 50px; right:50px; background: #E53030; border: 2px solid #fff; border-radius: 5px; box-shadow: 0 -2px 0 3px #c91919 inset, 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset; cursor: pointer; display: inline-block; color:#fff; font-size:16px;}
 .NextButtonWrapper a:hover {background: #f86262; color:#fff; box-shadow: 0 -2px 0 3px #E53030 inset, 0 5px 5px rgba(0, 0, 0, 0.17), 0 15px rgba(255, 255, 255, 0.32) inset;}
 .tonal-test-wrapper .ttl-position{position:absolute; right:50px; bottom:30px; font-size:16px;}
+
+
+.thankyou-view{color:#fff;}
