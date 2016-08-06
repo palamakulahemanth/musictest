@@ -140,7 +140,7 @@
 					
 				</div>
 				<div class="row NextButtonWrapper" style="display:none;">
-						<a id="aNextButtonWrapper"> href="<?=base_url();?>tonaltest/?level=<?=$CurrentLevel;?>">NEXT</a>
+						<a id="aNextButtonWrapper" href="<?=base_url();?>tonaltest/?level=<?=$CurrentLevel;?>">NEXT</a>
                     </div>
 		</section>
 	<!-- Body content ends here -->

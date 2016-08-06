@@ -6,7 +6,7 @@
 					   audio.addEventListener('ended', function() {
 						//alert(lstTuneNames.length);
 						   $('.tonal-test-wrapper .tonal-test-view .option-view label').css('pointer-events','inherit');
-						   $('#aNextButtonWrapper').trigger('click');
+						   window.location.href = $('#aNextButtonWrapper').attr('href');
 					 	 });
 				   });
 				});
