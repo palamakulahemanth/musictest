@@ -43,5 +43,22 @@ class FrontEndModel extends CI_Model
 		return $result;
 
 	}
+
+	function FetchResult()
+	{
+		$strQuery = "SELECT userid,questionid, optionid, answer, IF(optionid = answer, 1,0) AS result FROM aims_user_answers ua
+			INNER JOIN aims_questions q ON q.id = ua.`questionid`
+			WHERE userid = ".$this->session->userdata('UserID');
+			
+		$objQuery = $this->db->query($strQuery);
+
+		if($objQuery->num_rows())
+		{
+			return $objQuery->result_array();
+		}else
+		{
+			return array();
+		}
+	}
 }
 ?>
