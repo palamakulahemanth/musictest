@@ -56,7 +56,7 @@
 			}
 		?>
 		<div class="NextButtonWrapper" style="display:none;">
-			<a href="<?php if($hasNextLevel){ echo base_url().'introlevel/?level='.$intNextLevel; }else{ echo base_url().'home/logout'; } ?>" ><?php if($hasNextLevel){ echo "Next"; }else{ echo "Finish"; } ?></a> 
+			<a id="aNextButtonWrapper" href="<?php if($hasNextLevel){ echo base_url().'introlevel/?level='.$intNextLevel; }else{ echo base_url().'thankyou'; } ?>" ><?php if($hasNextLevel){ echo "Next"; }else{ echo "Finish"; } ?></a> 
 		</div>
 </section>
 <!-- Body content ends here -->

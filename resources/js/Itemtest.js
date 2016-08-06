@@ -67,7 +67,10 @@ $('document').ready(function(){
 
 				if((parseInt($("#hdnQuestionNo").val())+1) == arrQuestions.length)
 				{
-					$('.NextButtonWrapper').show();
+					//$('.NextButtonWrapper').show();
+					setTimeout(function(){
+						window.location.href = $("#aNextButtonWrapper").attr('href');
+					},5000);
 				}
 
 				var intNextQuestion = parseInt($("#hdnQuestionNo").val())+1;
