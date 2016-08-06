@@ -133,9 +133,11 @@
 										<th width="10%">Item No</th>
 										<th width="15%">Audio</th>
 										<th width="10%">Options Count</th>
-										<th width="10%">Acual Answer</th>
+										<th width="5%">Acual Answer</th>
 										<th width="10%">Test Level</th>
 										<th width="10%">Action</th>
+										<th width="5%">Active</th>
+										<th width="5%">Includein Scoring</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -153,6 +155,8 @@
 												<a href="javascript:void(0)" class="edit" data-index="<?=$key;?>" data-questionid="<?=$question['id'];?>" id="aEditQuestion" >Edit</a> 
 												<a href="javascript:void(0)" class="delete-btn" onclick=fnDeleteQuestion("<?=$question['id'];?>");>Delete</a>
 											</td>
+											<td class="text-center"><input type="checkbox" name="" /></td>
+											<td class="text-center"><input type="checkbox" name="" /></td>
 										</tr>
 									<?php
 										}
