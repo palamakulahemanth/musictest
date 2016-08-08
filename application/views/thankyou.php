@@ -7,9 +7,11 @@
 					<h1>
 						You have completed the AIMS Tonal Memory exercise. You correctly answered <span><?=$CorrectAns;?></span> of the <span><?=$NoOfQtsAttempted;?></span> items.
 					</h1>
-					<h2>
-						This indicates that you have <span><?=$Grade;?></span> Tonal Memory ability. 
+					<h2 class="color-white">
+						This indicates that you have <span class="color:"><?=$Grade;?></span> Tonal Memory ability. 
 					</h2>
+					<p class="color-white" style="font-size:24px; padding:10px 0;">Thank you for your effort!</p>
+					<p class="color-white" style="font-size:24px; padding:10px 0;">Continue with any unfinished work..</p>
 				</div>
             </div>
 		</div>
