@@ -24,7 +24,7 @@ function fnShowAlert()
 			
 	showGuessAlert = setTimeout(function(){
 		$('.alert-warning').fadeIn().delay(4000).fadeOut(400);
-	}, 5000);
+	}, 8000);
 }
 
 $('document').ready(function(){
@@ -112,7 +112,7 @@ $('document').ready(function(){
 					$("#h1QuestionCode").html(arrQuestions[intNextQuestion].questioncode);
 				}
 		
-			}, 3000);
+			}, 1000);
 		}
 	});
 
