@@ -87,11 +87,11 @@ class AdminModel extends CI_Model
 
 			$strNewFileName = false;
 
-			if($strQuestionCode && $strOptionsCount && $strQuestionLevel)
+			if($strQuestionCode)
 			{
 				$fileName = '';
 
-				if($_FILES && $_POST['id'] === -1)
+				if($_FILES && $_POST['id'] == -1)
 				{
 					$target_dir = "uploads/";
 
