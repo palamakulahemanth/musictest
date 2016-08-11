@@ -27,7 +27,7 @@ class Thankyou extends CI_Controller {
 				$intCounter = 0;
 
 				foreach ($arrResult as $key => $value) {
-					if($value['result'])
+					if($value['result'] && $value['includeinscoring'])
 					{
 						$intCounter = $intCounter + 1;
 					}

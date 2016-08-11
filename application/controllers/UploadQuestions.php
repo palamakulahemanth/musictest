@@ -59,4 +59,21 @@ class UploadQuestions extends CI_Controller {
 			redirect('/uploadquestions', 'refresh');
 		}
 	}
+
+	function includeinscore()
+	{
+		$this->load->model('adminmodel');
+
+		$result = $this->adminmodel->UpdateIncludeInScore();
+
+		if($result)
+		{
+			redirect('/uploadquestions', 'refresh');
+		}else
+		{
+			$this->session->set_flashdata('Errors', array('Unable to update question. Please try again later.'));
+
+			redirect('/uploadquestions', 'refresh');
+		}
+	}
 }

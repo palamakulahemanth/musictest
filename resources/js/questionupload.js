@@ -21,7 +21,7 @@ function fnValidateQuestionUpload()
 	
 }
 
-function fnDeleteQuestion(question_id)
+function fnDeleteQuestion(question_id, active)
 {
 	if(question_id)
 	{
@@ -29,7 +29,22 @@ function fnDeleteQuestion(question_id)
 			'type'		: 'POST',
 			'url'		: strBaseURL+'uploadquestions/deletequestion', 
 			'ajax' 		: true,
-			'data' 		: { questionid : question_id },
+			'data' 		: { questionid : question_id, active : active },
+			'success' 	: function(){},
+			'failure' 	: function(){}
+		});
+	}
+}
+
+function fnIncludeInScore(question_id, includeinscore)
+{
+	if(question_id)
+	{
+		$.ajax({
+			'type'		: 'POST',
+			'url'		: strBaseURL+'uploadquestions/includeinscore', 
+			'ajax' 		: true,
+			'data' 		: { questionid : question_id, includeinscore : includeinscore },
 			'success' 	: function(){},
 			'failure' 	: function(){}
 		});

@@ -58,7 +58,7 @@ class AdminModel extends CI_Model
 
 	function FetchQuestions()
 	{
-		$strQuery = 'SELECT * FROM aims_questions WHERE active = 1';
+		$strQuery = 'SELECT * FROM aims_questions';
 
 		$objQuery = $this->db->query($strQuery);
 
@@ -174,7 +174,7 @@ class AdminModel extends CI_Model
 
 	function _userResults($id_user)
 	{
-		$strQuery = 'SELECT ua.`questionid`, ua.`optionid`, q.`answer` FROM aims_user_answers ua INNER JOIN aims_questions q ON q.id = ua.`questionid` WHERE userid = '.$id_user;
+		$strQuery = 'SELECT ua.`questionid`, ua.`optionid`, q.`answer`, q.includeinscoring FROM aims_user_answers ua INNER JOIN aims_questions q ON q.id = ua.`questionid` WHERE userid = '.$id_user;
 
 		$objQuery = $this->db->query($strQuery);
 
@@ -195,10 +195,33 @@ class AdminModel extends CI_Model
 	{
 		$id = $_POST['questionid'];
 
+		$status = $_POST['active'];
+
 		if($id)
 		{
 			$arrData = array(
-                'active' => 0
+                'active' => $status
+            );
+
+	 		$this->db->where('id', $id);
+
+			$this->db->update('aims_questions', $arrData);
+		}else
+		{
+			return false;
+		}
+	}
+
+	function UpdateIncludeInScore()
+	{
+		$id = $_POST['questionid'];
+
+		$status = $_POST['includeinscore'];
+
+		if($id)
+		{
+			$arrData = array(
+                'includeinscoring' => $status
             );
 
 	 		$this->db->where('id', $id);

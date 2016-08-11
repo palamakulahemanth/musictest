@@ -144,6 +144,9 @@
 									<?php
 										foreach($Questions as $key => $question)
 										{
+
+											$intQuestionID = $question['id'];
+											$intIncludeInScore = $question['includeinscoring'];
 									?>
 										<tr>
 											<td><?=$question['questioncode'];?></td>
@@ -153,10 +156,14 @@
 											<td><?=$question['questionlevel'];?></td>
 											<td>
 												<a href="javascript:void(0)" class="edit" data-index="<?=$key;?>" data-questionid="<?=$question['id'];?>" id="aEditQuestion" >Edit</a> 
-												<a href="javascript:void(0)" class="delete-btn" onclick=fnDeleteQuestion("<?=$question['id'];?>");>Delete</a>
+												<a href="javascript:void(0)" class="delete-btn" onclick=fnDeleteQuestion("<?=$question['id'];?>", "0");>Delete</a>
 											</td>
-											<td class="text-center"><input type="checkbox" name="" /></td>
-											<td class="text-center"><input type="checkbox" name="" /></td>
+											<td class="text-center">
+												<input type="checkbox" name="active" <?php if($question['active']){ echo "checked"; } ?>  onchange=fnDeleteQuestion("<?=$question['id'];?>","<?php if($question['active']){ echo 0; }else{ echo 1; } ?>"); />
+											</td>
+											<td class="text-center">
+												<input type="checkbox" name="includeinscoring" <?php if($question['includeinscoring']){ echo "checked"; } ?> onchange="fnIncludeInScore('<?=$intQuestionID;?>', '<?php if($intIncludeInScore){ echo 0; }else{ echo 1; } ?>');" />
+											</td>
 										</tr>
 									<?php
 										}

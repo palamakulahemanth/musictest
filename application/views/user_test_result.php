@@ -89,7 +89,7 @@
 												?>
 												<td width="2.3%">
 													<?php
-														if($value['test_result'][$intCtr]['answer'] == $value['test_result'][$intCtr]['optionid'])
+														if($value['test_result'][$intCtr]['answer'] == $value['test_result'][$intCtr]['optionid'] && $value['test_result'][$intCtr]['includeinscoring'])
 														{
 															$intCorrectAnswer = $intCorrectAnswer+1;
 															echo 1;
