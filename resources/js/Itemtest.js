@@ -53,7 +53,7 @@ $(document).on("keydown", disableF5);
 		   });
 
 	   });
-   },6000);
+   },200);
 
    $("input.custom-radio-button").bind('click', function()
 	{	
@@ -75,7 +75,7 @@ $(document).on("keydown", disableF5);
 					//$('.NextButtonWrapper').show();
 					setTimeout(function(){
 						window.location.href = $("#aNextButtonWrapper").attr('href');
-					},5000);
+					},2000);
 				}
 
 				var intNextQuestion = parseInt($("#hdnQuestionNo").val())+1;
