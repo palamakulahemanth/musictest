@@ -40,11 +40,11 @@ class Thankyou extends CI_Controller {
 				$percentage = (($intCounter*100)/sizeof($arrResult));
 
 				if($percentage < 30)
-					$strGrade = "Week";
+					$strGrade = "<span style='color:#ff0000;'>Week</span>";
 				elseif($percentage >= 30 && $percentage < 70)
-					$strGrade = "Average";
+					$strGrade = "<span style='color:#00ff00;'>Average</span>";
 				elseif($percentage >= 70)
-					$strGrade = "Strong";
+					$strGrade = "<span style='color:#00ff00;'>Strong</span>";
 
 				$arrData['Grade'] = $strGrade;
 

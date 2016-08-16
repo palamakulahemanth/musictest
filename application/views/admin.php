@@ -21,7 +21,7 @@
 <body>
 	<div class="intro-wrapper registrer-wrapper">
 	<!-- Registration Block goes here -->
-         <form class="form-horizontal col-lg-4 col-md-5 col-sm-6 col-xs-6" role="form" id="AdminLoginForm" action="admin/login" method="POST">
+         <form class="form-horizontal col-lg-4 col-md-5 col-sm-6 col-xs-6" role="form" id="AdminLoginForm" action="admin/login" method="POST" autocomplete="off">
          		<div class="pull-right" style="color:#a94442; font-size:13px; padding:0 0 10px 0;">
 	         		<?php
 	         			echo $this->session->flashdata('Errors');
@@ -32,13 +32,13 @@
                 <div class="form-group">
                     <label for="Username" class="col-sm-4 control-label">User Name : </label>
                     <div class="col-sm-8">
-                        <input type="text" id="Username" placeholder="User Name" class="form-control" maxlength="8" minlength="5" name="userame" autofocus />
+                        <input type="text" id="Username" placeholder="User Name" class="form-control" maxlength="8" minlength="5" name="userame" autocomplete="off" />
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="Password" class="col-sm-4 control-label">Password : </label>
                     <div class="col-sm-8">
-                         <input type="password" id="Password" placeholder="Password" class="form-control" maxlength="8" minlength="5" name="password" />
+                         <input type="password" id="Password" placeholder="Password" class="form-control" maxlength="8" minlength="5" name="password" autocomplete="off"  />
                     </div>
                 </div>
                 
