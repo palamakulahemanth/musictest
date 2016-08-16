@@ -16,6 +16,9 @@
 		<link href="<?=base_url();?>resources/css/cssBundle.css" rel="stylesheet" />
 		<link href="<?=base_url();?>resources/css/admin.css" rel="stylesheet" />
 		<script src="<?=base_url();?>resources/js/modernizr-2.6.2.min.js"></script>
+		<script type="text/javascript">
+			var strBaseURL = "<?=base_url();?>";
+		</script>
 		</head>
 	<body>
 		
@@ -40,7 +43,10 @@
 			<!-- Body Content goes here -->
 				<section class="adminDashboardView">
 					<div class="UserListView container">
-							<table width="100%" cellspacing="0" cellpadding="0" class="table table-bordered">
+							<div class="row text-center" style="margin:10px;padding:5px;" >
+								<input type="text" name="search_query" placeholder="Search Query" id="sleSearchQuery">
+							</div>
+							<table width="100%" id="tblCustomerList" cellspacing="0" cellpadding="0" class="table table-bordered">
 								<thead>
 								<tr>
 									<th width="20%">First Name</th>
@@ -76,6 +82,6 @@
 		<!-- JS files will load here -->
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-		
+		<script type="text/javascript" src="<?=base_url();?>resources/js/userslist.js"></script>
 	</body>
 </html>

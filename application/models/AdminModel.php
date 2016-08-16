@@ -172,6 +172,66 @@ class AdminModel extends CI_Model
 		return $objQuery->result_array();
 	}
 
+	function FetchFilteredUsers()
+	{
+		$search_query = $_GET['search_query'];
+
+		$arrTemp = explode("-", $search_query);
+
+		if(count($arrTemp) == 3)
+		{
+			if($arrTemp[0] == 1)
+				$strGender = "female";
+			else
+				$strGender = "male";
+
+			$strQuery = $this->db->get_where('aims_users',array('gender ='=>$strGender, 'age >= ' => $arrTemp[1], 'age <= ' => $arrTemp['2']));
+
+			if($strQuery->num_rows())
+			{
+				return $strQuery->result_array();
+			}else
+			{
+				return array();
+			}
+
+
+		}elseif(count($arrTemp) == 2)
+		{
+			if($arrTemp[0] == 1)
+				$strGender = "female";
+			else
+				$strGender = "male";
+
+			$strQuery = $this->db->get_where('aims_users',array('gender ='=>'$strGender', 'age >= ' => $arrTemp[1]));
+
+			if($strQuery->num_rows())
+			{
+				return $strQuery->result_array();
+			}else
+			{
+				return array();
+			}
+		}elseif(count($arrTemp) == 1)
+		{
+			if($arrTemp[0] == 1)
+				$strGender = "female";
+			else
+				$strGender = "male";
+
+			$strQuery = $this->db->get_where('aims_users',array('gender ='=>'$strGender'));
+
+			if($strQuery->num_rows())
+			{
+				return $strQuery->result_array();
+			}else
+			{
+				return array();
+			}
+		}
+
+	}
+
 	function _userResults($id_user)
 	{
 		$strQuery = 'SELECT ua.`questionid`, ua.`optionid`, q.`answer`, q.includeinscoring FROM aims_user_answers ua INNER JOIN aims_questions q ON q.id = ua.`questionid` WHERE userid = '.$id_user;

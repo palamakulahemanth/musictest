@@ -22,4 +22,15 @@ class UsersList extends CI_Controller {
 		}
 
 	}
+
+	public function getusers()
+	{
+		$search_query = $_GET['search_query'];
+
+		$this->load->model('adminmodel');
+
+		$arrData['Users'] = $this->adminmodel->FetchFilteredUsers();
+
+		echo json_encode(array('Users' => $arrData['Users']));
+	}
 }
