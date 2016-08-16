@@ -185,7 +185,7 @@ class AdminModel extends CI_Model
 			else
 				$strGender = "male";
 
-			$strQuery = $this->db->get_where('aims_users',array('gender ='=>$strGender, 'age >= ' => $arrTemp[1], 'age <= ' => $arrTemp['2']));
+			$strQuery = $this->db->get_where('aims_users',array('gender ='=>$strGender, 'age >= ' => $arrTemp[1], 'age <= ' => $arrTemp[2]));
 
 			if($strQuery->num_rows())
 			{
@@ -203,7 +203,7 @@ class AdminModel extends CI_Model
 			else
 				$strGender = "male";
 
-			$strQuery = $this->db->get_where('aims_users',array('gender ='=>'$strGender', 'age >= ' => $arrTemp[1]));
+			$strQuery = $this->db->get_where('aims_users',array('age >= ' => $arrTemp[0], 'age <= ' => $arrTemp[1]));
 
 			if($strQuery->num_rows())
 			{
@@ -212,7 +212,9 @@ class AdminModel extends CI_Model
 			{
 				return array();
 			}
-		}elseif(count($arrTemp) == 1)
+		}
+
+		/*elseif(count($arrTemp) == 1)
 		{
 			if($arrTemp[0] == 1)
 				$strGender = "female";
@@ -228,7 +230,7 @@ class AdminModel extends CI_Model
 			{
 				return array();
 			}
-		}
+		}*/
 
 	}
 
