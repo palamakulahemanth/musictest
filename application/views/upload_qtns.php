@@ -37,7 +37,7 @@
 					<li><a href="<?=base_url();?>userslist">Users List</a></li>
 					<li><a href="<?=base_url();?>usertestresult">Test Result</a></li>
 					<li class="active"><a href="#">Upload Test Item</a></li>
-					<li class="pull-right"><a href="#">Log Out</a></li>
+					<li class="pull-right"><a href="<?=base_url();?>admindashboard/logout">Log Out</a></li>
 				  </ul>
 				</div><!--/.nav-collapse -->
 			  </div>
