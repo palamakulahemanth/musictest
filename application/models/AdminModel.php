@@ -238,7 +238,13 @@ class AdminModel extends CI_Model
 
 		$objQuery = $this->db->query($strQuery);
 
-		return $objQuery->result_array();
+		if($objQuery->num_rows() > 0)
+		{
+			return $objQuery->result_array();
+		}else
+		{
+			return array();
+		}
 	}
 
 	function FetchTestResult()
