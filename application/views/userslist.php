@@ -49,8 +49,8 @@
 							<table width="100%" id="tblCustomerList" cellspacing="0" cellpadding="0" class="table table-bordered">
 								<thead>
 								<tr>
-									<th width="20%">First Name</th>
-									<th width="20%">Last Name</th>
+									<!--th width="20%">First Name</th>
+									<th width="20%">Last Name</th-->
 									<th width="15%">Age</th>
 									<th width="15%">Gender</th>
 									<th width="15%">File Number</th>
@@ -62,8 +62,8 @@
 										foreach($Users as $user){
 									?>
 										<tr>
-											<td><?=$user['firstname'];?></td>
-											<td><?=$user['lastname'];?></td>
+											<!--td><?=$user['firstname'];?></td>
+											<td><?=$user['lastname'];?></td-->
 											<td><?=$user['age'];?></td>
 											<td><?=$user['gender'];?></td>
 											<td><?=$user['filenumber'];?></td>

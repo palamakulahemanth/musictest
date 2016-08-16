@@ -43,10 +43,10 @@
 							<table width="100%" cellspacing="0" cellpadding="0" class="table table-bordered">
 								<thead>
 								<tr>
-									<th width="3%">Male</th>
 									<th width="3%">Age</th>
+									<th width="3%">Sex</th>
 									<th width="10%">File Number</th>
-									<th width="84%">RESPONSES</th>
+									<th width="87%">Type of Data</th>
 								</tr>
 								</thead>
 								<tbody>
@@ -54,8 +54,10 @@
 									foreach ($TestResults as $key => $value) {
 								?>
 								<tr>
-									<td valign="middle"><?=$value['firstname'];?></td>
+									<!--td valign="middle"><?=$value['firstname'];?></td-->
 									<td valign="middle"><?=$value['age'];?></td>
+									<td><?=$value['gender'];?></td>
+									
 									<td valign="middle"><?=$value['filenumber'];?></td>
 									<td>
 										<table width="100%" cellspacing="0" cellpadding="0" class="table table-bordered">
