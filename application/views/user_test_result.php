@@ -47,6 +47,7 @@
 									<th width="3%">Sex</th>
 									<th width="10%">File Number</th>
 									<th width="87%">Type of Data</th>
+									<th width="10%">Certile</th>
 								</tr>
 								</thead>
 								<tbody>
@@ -109,6 +110,18 @@
 												<td align="right" style="padding:10px;">Item Score : <strong><?=$intCorrectAnswer;?> (<?=sizeof($value['test_result']);?> questions)</strong></td>
 											</tr>
 										</table>
+									</td>
+									<td>
+										<?php 
+											foreach($Certiles as $c)
+											{
+												if($intCorrectAnswer == $c['score'])
+												{
+													echo $c['certile'];
+													break;
+												}
+											}
+										?>
 									</td>
 								</tr>	
 								<?php

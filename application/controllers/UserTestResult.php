@@ -13,6 +13,8 @@ class UserTestResult extends CI_Controller {
 
 		$arrData['TestResults'] = $this->adminmodel->FetchTestResult();
 
+		$arrData['Certiles'] = $this->adminmodel->FetchCertile();
+
 		$this->load->view('user_test_result', $arrData);
 	}
 }

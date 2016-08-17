@@ -172,6 +172,15 @@ class AdminModel extends CI_Model
 		return $objQuery->result_array();
 	}
 
+	function FetchCertile()
+	{
+		$strQuery = 'SELECT * FROM aims_certile ORDER BY id DESC';
+
+		$objQuery = $this->db->query($strQuery);
+
+		return $objQuery->result_array();
+	}
+
 	function FetchFilteredUsers()
 	{
 		$search_query = $_GET['search_query'];
