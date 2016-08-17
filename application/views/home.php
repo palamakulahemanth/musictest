@@ -1,7 +1,7 @@
 <?=$Header;?>
 	<div class="intro-wrapper registrer-wrapper">
 	<!-- Registration Block goes here -->
-         <form class="form-horizontal col-lg-4 col-md-5 col-sm-6 col-xs-6" role="form" id="ToneRegisterForm" action="home/register" method="POST">
+         <form class="form-horizontal col-lg-4 col-md-5 col-sm-6 col-xs-6" role="form" id="ToneRegisterForm" action="home/register" method="POST" autocomplete="false">
          		<?php
          			print_r($this->session->flashdata('Errors'));
          		?>
@@ -9,20 +9,20 @@
                 <div class="form-group">
                     <label for="sleFirstName" class="col-sm-4 control-label">First Name : </label>
                     <div class="col-sm-8">
-                        <input type="text" id="sleFirstName" placeholder="Full Name" class="form-control" maxlength="30" minlength="5" name="firstname" autofocus />
+                        <input type="text" id="sleFirstName" placeholder="Full Name" class="form-control" maxlength="30" minlength="5" name="firstname" autocomplete="false" />
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="sleLastName" class="col-sm-4 control-label">Last Name : </label>
                     <div class="col-sm-8">
-                         <input type="text" id="sleLastName" placeholder="Last Name" class="form-control" maxlength="30" minlength="5" name="lastname" />
+                         <input type="text" id="sleLastName" placeholder="Last Name" class="form-control" maxlength="30" minlength="5" name="lastname" autocomplete="false" />
                     </div>
                 </div>
                 
                 <div class="form-group">
                     <label for="sleAge" class="col-sm-4 control-label">Age in Years : </label>
                     <div class="col-sm-8">
-                        <input type="text" id="sleAge" class="form-control" maxlength="3" name="age" />
+                        <input type="text" id="sleAge" class="form-control" maxlength="3" name="age" autocomplete="false" />
                     </div>
                 </div>
             
@@ -47,7 +47,7 @@
                <div class="form-group">
                     <label for="sleFileNumber" class="col-sm-4 control-label">File Number :</label>
                     <div class="col-sm-8">
-                         <input type="text" id="sleFileNumber" placeholder="File Number" class="form-control" name="filenumber" />
+                         <input type="text" id="sleFileNumber" placeholder="File Number" class="form-control" name="filenumber" autocomplete="false" />
                     </div>
                 </div>
                 
