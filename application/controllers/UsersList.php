@@ -57,7 +57,7 @@ class UsersList extends CI_Controller {
 		}
 
 		// Enable to download this file
-		$filename = "sampledata.csv";
+		$filename = "UsersList.csv";
 		 
 		header("Content-Disposition: attachment; filename=\"$filename\"");
 		header("Content-Type: text/csv");

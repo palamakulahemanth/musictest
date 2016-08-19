@@ -39,6 +39,9 @@
 			<!-- Header ends here -->
 			<!-- Body Content goes here -->
 				<section class="adminDashboardView">
+					<div>
+						<a id="btnExport" class="btn btn-primary pull-right col-md-1 col-sm-1" target="_blank" href="<?=base_url();?>usertestresult/export" style="width:150px; min-width:inherit; margin-right:15px;"> Export </a>
+					</div>
 					<div class="UserListView">
 							<table width="100%" cellspacing="0" cellpadding="0" class="table table-bordered">
 								<thead>
