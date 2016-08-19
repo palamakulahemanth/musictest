@@ -38,6 +38,14 @@ class UsersList extends CI_Controller {
 		$this->load->model('adminmodel');
 
 		$arrData['Users'] = $this->adminmodel->FetchFilteredUsers();
+		
+		foreach ($arrData['Users'] as $key => &$value) {
+			$intScore = $this->adminmodel->FetchUserResult($value['id']);
+
+			$value['score'] = $intScore;
+
+			$value['certile'] = $this->adminmodel->FetchCertileWRT($intScore);
+		}
 
 		echo json_encode(array('Users' => $arrData['Users']));
 	}

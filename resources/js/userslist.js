@@ -16,12 +16,12 @@ $(document).ready(function(){
 					for(var intCtr = 0; intCtr < response.length; intCtr++)
 					{
 						strHTML += "<tr>";
-						strHTML += "<td>"+response[intCtr]['firstname']+"</td>";
-						strHTML += "<td>"+response[intCtr]['lastname']+"</td>";
 						strHTML += "<td>"+response[intCtr]['age']+"</td>";
 						strHTML += "<td>"+response[intCtr]['gender']+"</td>";
 						strHTML += "<td>"+response[intCtr]['filenumber']+"</td>";
 						strHTML += "<td>"+response[intCtr]['addeddate']+"</td>";
+						strHTML += "<td>"+response[intCtr]['score']+"</td>";
+						strHTML += "<td>"+response[intCtr]['certile']+"</td>";
 					}
 
 					strHTML += "</tr>";

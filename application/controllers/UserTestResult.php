@@ -35,6 +35,7 @@ class UserTestResult extends CI_Controller {
 				foreach ($value['test_result'] as $key => $qt) {
 					$value['Answer '.$intQt] = ' '.$qt['questionid'].'-'.$qt['answer'];
 					$arrHeaders[] = 'Question'.$intQt.'-Answer';
+					$intQt++;
 				}
 			}
 
@@ -59,7 +60,7 @@ class UserTestResult extends CI_Controller {
 			{
 				for($intCtr = ($intTempCount-6); $intCtr < ($maxColumns-$intTempCount); $intCtr++)
 				{
-					$value['Answer '.($intCtr+1)] = ' 0';
+					$value['Answer '.($intCtr+1)] = 'NULL';
 				}
 			}
 		}
@@ -75,6 +76,8 @@ class UserTestResult extends CI_Controller {
 		$arrHeaders[] = 'Score';
 		$arrHeaders[] = 'Certile';
 
+		$arrHeaders = array_unique($arrHeaders);
+		
 		// Enable to download this file
 		$filename = "UsersTestResult.csv";
 		 		
