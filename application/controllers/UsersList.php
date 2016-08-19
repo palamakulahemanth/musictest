@@ -15,6 +15,14 @@ class UsersList extends CI_Controller {
 
 			$arrData['Users'] = $this->adminmodel->FetchUsers();
 
+			foreach ($arrData['Users'] as $key => &$value) {
+				$intScore = $this->adminmodel->FetchUserResult($value['id']);
+
+				$value['score'] = $intScore;
+
+				$value['certile'] = $this->adminmodel->FetchCertileWRT($intScore);
+			}
+
 			$this->load->view('userslist', $arrData);
 		}else
 		{

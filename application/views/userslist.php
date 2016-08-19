@@ -55,6 +55,8 @@
 									<th width="15%">Gender</th>
 									<th width="15%">File Number</th>
 									<th width="15%">Joined Date</th>
+									<th width="10%">Score</th>
+									<th width="10%">Certile</th>
 								</tr>
 								</thead>
 								<tbody>
@@ -68,6 +70,8 @@
 											<td><?=$user['gender'];?></td>
 											<td><?=$user['filenumber'];?></td>
 											<td><?=$user['addeddate'];?></td>
+											<td><?=$user['score'];?></td>
+											<td><?=$user['certile'];?></td>
 										</tr>
 									<?php
 										}

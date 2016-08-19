@@ -172,11 +172,46 @@ class AdminModel extends CI_Model
 		return $objQuery->result_array();
 	}
 
+	function FetchUserResult($id_user)
+	{
+		$arrTemp = $this->_userResults($id_user);
+
+		$intCounter = 0;
+
+		foreach ($arrTemp as $key => $value) {
+			if($value['includeinscoring'] && ($value['optionid'] == $value['answer']))
+			{
+				$intCounter = $intCounter + 1;
+			}
+		}
+
+		return $intCounter;
+	}
+
 	function FetchCertile()
 	{
 		$strQuery = 'SELECT * FROM aims_certile ORDER BY id DESC';
 
 		$objQuery = $this->db->query($strQuery);
+
+		return $objQuery->result_array();
+	}
+
+	function FetchCertileWRT($p_intScore)
+	{
+		$strQuery = 'SELECT certile FROM aims_certile WHERE score = '.$p_intScore;
+
+		$objQuery = $this->db->query($strQuery);
+
+		if($objQuery->num_rows())
+		{
+			$temp = $objQuery->row_array();
+
+			return $temp['certile'];
+		}else
+		{
+			return 0;
+		}
 
 		return $objQuery->result_array();
 	}
