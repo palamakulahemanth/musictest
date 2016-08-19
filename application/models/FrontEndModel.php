@@ -46,7 +46,7 @@ class FrontEndModel extends CI_Model
 
 	function FetchResult()
 	{
-		$strQuery = "SELECT userid,questionid, optionid, answer, IF(optionid = answer, 1,0) AS result FROM aims_user_answers ua
+		$strQuery = "SELECT userid,questionid,includeinscoring, optionid, answer, IF(optionid = answer, 1,0) AS result FROM aims_user_answers ua
 			INNER JOIN aims_questions q ON q.id = ua.`questionid`
 			WHERE userid = ".$this->session->userdata('UserID');
 			
