@@ -28,7 +28,7 @@
 		 $(".thankyou_01, .thankyou_02").hide();
 			timer = setTimeout(function () {
 				$('.thankyou_01').show();
-			}, 30000);
+			}, 100);
 			timer = setTimeout(function () {
 				$('.thankyou_02').show();
 				$('.thankyou_01').hide();
