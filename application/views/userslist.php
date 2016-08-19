@@ -46,6 +46,9 @@
 							<div class="row text-center" style="margin:10px;padding:5px;" >
 								<input type="text" name="search_query" placeholder="Search Query" id="sleSearchQuery" style="padding:5px 10px; float:right;" />
 							</div>
+							<div>
+								<a id="btnExport" target="_blank" href="<?=base_url();?>userslist/export"> Export </a>
+							</div>
 							<table width="100%" id="tblCustomerList" cellspacing="0" cellpadding="0" class="table table-bordered">
 								<thead>
 								<tr>
