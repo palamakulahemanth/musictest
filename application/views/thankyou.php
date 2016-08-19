@@ -28,11 +28,11 @@
 		 $(".thankyou_01, .thankyou_02").hide();
 			timer = setTimeout(function () {
 				$('.thankyou_01').show();
-			}, 300);
+			}, 30000);
 			timer = setTimeout(function () {
 				$('.thankyou_02').show();
 				$('.thankyou_01').hide();
-			}, 6000);
+			}, 30000);
 			
 		
 		setTimeout(function(){
@@ -44,7 +44,7 @@
 				'success' 	: function(response){ window.location.href = strBaseURL; },
 				'failure' 	: function(){}
 			});
-		},10000);
+		},100000);
 	});
 </script>
 <?=$Footer;?>
