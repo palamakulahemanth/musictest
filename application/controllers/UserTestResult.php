@@ -33,8 +33,8 @@ class UserTestResult extends CI_Controller {
 			if(count($value['test_result']) > 0)
 			{
 				foreach ($value['test_result'] as $key => $qt) {
-					$value['Answer '.$intQt] = ' '.$qt['questionid'].'-'.$qt['answer'];
-					$arrHeaders[] = 'Question'.$intQt.'-Answer';
+					$value['Answer '.$intQt] = $qt['answer'];
+					$arrHeaders[] = $intQt;
 					$intQt++;
 				}
 			}
@@ -60,7 +60,7 @@ class UserTestResult extends CI_Controller {
 			{
 				for($intCtr = ($intTempCount-6); $intCtr < ($maxColumns-$intTempCount); $intCtr++)
 				{
-					$value['Answer '.($intCtr+1)] = 'NULL';
+					$value['Answer '.($intCtr+1)] = ' ';
 				}
 			}
 		}
