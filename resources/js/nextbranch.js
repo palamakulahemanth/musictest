@@ -21,6 +21,9 @@
 						   if (curPlaying + 1 == lstTuneNames.length ) {
 							  $('.intro-screen-01').show();
 							  $('.intro-wrapper .img-view').hide();
+							  var audioPlayAfter = document.getElementById("ClickToPlay");
+							   ClickToPlay.play();
+							   
 						   }
 						    
 						   var urls = audio.getElementsByTagName('source');

@@ -44,7 +44,7 @@
 				'success' 	: function(response){ window.location.href = strBaseURL; },
 				'failure' 	: function(){}
 			});
-		},100000);
+		},60000);
 	});
 </script>
 <?=$Footer;?>

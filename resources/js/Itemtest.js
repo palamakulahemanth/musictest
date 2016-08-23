@@ -20,11 +20,11 @@ function fnShowAlert()
 
 	clearTimeout(showGuessAlert);
 
-	$('.alert-danger').fadeIn().delay(4000).fadeOut(400);
+	$('.alert-danger').fadeIn().delay(3000).fadeOut(100);
 			
 	showGuessAlert = setTimeout(function(){
-		$('.alert-warning').fadeIn().delay(4000).fadeOut(400);
-	}, 8000);
+		$('.alert-warning').fadeIn().delay(9000).fadeOut(100);
+	}, 12000);
 }
 
 $('document').ready(function(){
@@ -49,7 +49,7 @@ $(document).on("keydown", disableF5);
 
 				showAlert = setInterval(function(){
 					fnShowAlert();
-				},3000);
+				},8000);
 		   });
 
 	   });

@@ -19,6 +19,9 @@
                     <a href="tonaltest?level=3" class="next-button col-md-4 col-sm-4 col-xs-4 text-center col-md-offset-1 col-sm-offset-1 col-xs-offset-1">Start</a>
                      <a href="newexampleinfo" class="blue-button more-info col-md-5 col-sm-5 col-xs-5 text-center col-md-offset-1 col-sm-offset-1 col-xs-offset-1">More Information</a>
                 </div>
+				<audio id="ClickToPlay" class="audio-control" controls="controls" runat="server">
+                               <source src='resources/audio/next-branch/new41.wav'></source>
+                        </audio>
                 <!-- Screen to check next or new example ends -->
             </div>
 		</div>
