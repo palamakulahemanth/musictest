@@ -9,13 +9,13 @@
                 <div class="form-group">
                     <label for="sleFirstName" class="col-sm-4 control-label">First Name : </label>
                     <div class="col-sm-8">
-                        <input type="text" id="sleFirstName" placeholder="Full Name" class="form-control" maxlength="30" minlength="5" name="firstname" autocomplete="false" />
+                        <input type="text" id="sleFirstName" placeholder="First Name" class="form-control" maxlength="30" minlength="2" name="firstname" autocomplete="false" />
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="sleLastName" class="col-sm-4 control-label">Last Name : </label>
                     <div class="col-sm-8">
-                         <input type="text" id="sleLastName" placeholder="Last Name" class="form-control" maxlength="30" minlength="5" name="lastname" autocomplete="false" />
+                         <input type="text" id="sleLastName" placeholder="Last Name" class="form-control" maxlength="30" minlength="2" name="lastname" autocomplete="false" />
                     </div>
                 </div>
                 
@@ -47,7 +47,7 @@
                <div class="form-group">
                     <label for="sleFileNumber" class="col-sm-4 control-label">File Number :</label>
                     <div class="col-sm-8">
-                         <input type="text" id="sleFileNumber" placeholder="File Number" class="form-control" name="filenumber" value="D-2016-" autocomplete="false" />
+                         <input type="text" id="sleFileNumber" placeholder="File Number" class="form-control" name="filenumber" value="3A-D-2016-" autocomplete="false" />
                     </div>
                 </div>
                 
