@@ -74,9 +74,9 @@
 									message: 'The firstname is required and can\'t be empty'
 								},
 								stringLength: {
-									min: 5,
+									min: 2,
 									max: 30,
-									message: 'The firstname must be more than 6 and less than 30 characters long'
+									message: 'The firstname must be more than 1 and less than 30 characters long'
 								},
 								regexp: {
 									regexp: /^[a-zA-Z0-9_\.]+$/,
@@ -90,9 +90,9 @@
 									message: 'The lastname is required and can\'t be empty'
 								},
 								stringLength: {
-									min: 5,
+									min: 2,
 									max: 30,
-									message: 'The lastname must be more than 6 and less than 30 characters long'
+									message: 'The lastname must be more than 1 and less than 30 characters long'
 								},
 								regexp: {
 									regexp: /^[a-zA-Z0-9_\.]+$/,
