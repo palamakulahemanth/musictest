@@ -32,7 +32,7 @@
 					</div>
 				 <!-- Actual test ends here -->
 					<div class="alert alert-danger text-center col-md-6 col-sm-6 col-xs-6 col-md-offset-3 col-sm-offset-3 col-xs-offset-3" style="display:none; position:absolute;">
-					  <strong>why haven’t you made a response! <br> Make a guess!</br></strong> 
+					  <strong>Why haven’t you made a response! <br> Make a guess!</br></strong> 
 					</div>
 					<div class="alert alert-warning text-center col-md-4 col-sm-4 col-xs-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4" style="display:none; position:absolute;">
 					  <strong> You have not answered the last problem. <br> <br> If you are having a problem and cannot continue, please talk to an AIMS staff member <font size="4"> Immediately! </font> </strong> 

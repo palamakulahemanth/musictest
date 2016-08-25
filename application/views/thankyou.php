@@ -32,7 +32,7 @@
 			timer = setTimeout(function () {
 				$('.thankyou_02').show();
 				$('.thankyou_01').hide();
-			}, 30000);
+			}, 15000);
 			
 		
 		setTimeout(function(){
@@ -44,7 +44,7 @@
 				'success' 	: function(response){ window.location.href = strBaseURL; },
 				'failure' 	: function(){}
 			});
-		},60000);
+		},25000);
 	});
 </script>
 <?=$Footer;?>
